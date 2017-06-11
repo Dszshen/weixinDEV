@@ -1,0 +1,107 @@
+// BEGIN PAGE BAR
+.page-bar
+    ul.page-breadcrumb
+        li
+            a(href='#/dashboard') 首页
+            i.fa.fa-circle
+        li
+            span XX公司信息
+    //.page-toolbar
+        .btn-group.pull-right
+            button.btn.green.btn-sm.btn-outline.dropdown-toggle(type='button', data-toggle='dropdown')
+                | Actions
+                i.fa.fa-angle-down
+            ul.dropdown-menu.pull-right(role='menu')
+                li
+                    a(href='#')
+                        i.icon-bell
+                        |  Action
+                li
+                    a(href='#')
+                        i.icon-shield
+                        |  Another action
+                li
+                    a(href='#')
+                        i.icon-user
+                        |  Something else here
+                li.divider
+                li
+                    a(href='#')
+                        i.icon-bag
+                        |  Separated link
+// END PAGE BAR
+// BEGIN PAGE TITLE
+h3.page-title
+    | XX公司信息
+// END PAGE TITLE
+// END PAGE HEADER
+.row
+    .col-md-12
+        // BEGIN SAMPLE FORM PORTLET
+        .portlet.light.bordered
+            .portlet-title
+                .caption.font-red-sunglo
+                    i.icon-settings.font-dark-sunglo
+                    span.caption-subject.font-dark.sbold.uppercase  XX公司信息
+                //.actions
+                    .btn-group
+                        a.btn.btn-sm.green.dropdown-toggle(href='javascript:;', data-toggle='dropdown')
+                            | 处理
+                            i.fa.fa-angle-down
+                        ul.dropdown-menu.pull-right
+                            li
+                                a(href='javascript:;')
+                                    i.fa.fa-pencil
+                                    |  编辑
+                            li
+                                a(href='javascript:;')
+                                    i.fa.fa-trash-o
+                                    |  删除
+                            li
+                                a(href='javascript:;')
+                                    i.fa.fa-ban
+                                    |  禁用
+                            li.divider
+                            li
+                                a(href='javascript:;')  Make admin
+            .portlet-body.form
+                .form-horizontal(role='form')
+                    .form-body
+                        .form-group
+                            label.col-md-2.control-label 名称:
+                            .col-md-6
+                                input.form-control(type='text', placeholder='名称')
+                                //span.help-block  数据库地址.
+                        .form-group
+                            label.col-md-2.control-label 地址:
+                            .col-md-6
+                                input.form-control(type='text', placeholder='地址')
+                                //span.help-block  数据库地址.
+                        .form-group
+                            label.col-md-2.control-label 规模:
+                            .col-md-6
+                                input.form-control(type='text', placeholder='公司规模')
+                        .form-group
+                            label.col-md-2.control-label 主营业务:
+                            .col-md-6
+                                input.form-control(type='text', placeholder='主营业务')
+                        .form-group
+                            label.col-md-2.control-label 座机:
+                            .col-md-6
+                                input.form-control(type='text', placeholder='座机')
+                        .form-group
+                            label.col-md-2.control-label 法人:
+                            .col-md-6
+                                input.form-control(type='text', placeholder='法人')
+                        .form-group
+                            label.col-md-2.control-label 年限:
+                            .col-md-6
+                                input.form-control(type='text', placeholder='年限')
+                        .form-group
+                            label.col-md-2.control-label 备注:
+                            .col-md-6
+                                textarea.form-control(rows="5" placeholder='备注')
+                    .form-actions
+                        button.btn.blue(type='submit') 确定
+                        button.btn.default(type='button') 取消
+        // END SAMPLE FORM PORTLET

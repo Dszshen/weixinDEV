@@ -1,0 +1,42 @@
+.hmtop
+    // 顶部导航条
+    .am-container.header
+        ul.message-l
+            .topMessage
+                .menu-hd
+                    a.h(href='/mall/product/detail.html', target='_top') 亲，请登录
+                    a(href='/mall/product/detail.html', target='_top') 免费注册
+        ul.message-r
+            .topMessage.home
+                .menu-hd
+                    a.h(href='/mall/home/index.html', target='_top') 商城首页
+            .topMessage.my-shangcheng
+                .menu-hd.MyShangcheng
+                    a(href='/mall/personal/index.html', target='_top')
+                        i.am-icon-user.am-icon-fw
+                        | 个人中心
+            .topMessage.mini-cart
+                .menu-hd
+                    a#mc-menu-hd(href='/mall/product/detail.html', target='_top')
+                        i.am-icon-shopping-cart.am-icon-fw
+                        span 购物车
+                        strong#J_MiniCartNum.h 0
+            .topMessage.favorite
+                .menu-hd
+                    a(href='/mall/personal/collection.html', target='_top')
+                        i.am-icon-heart.am-icon-fw
+                        span 收藏夹
+    // 悬浮搜索框
+    .nav.white
+        //.logo
+            img(src='${request.contextPath}/assets/images/mall/logo.png')
+        .logoBig
+            a(href="/mall/home/index.html")
+                h1(style="font-size:40px;color:orange;padding:15px 20px;") 流行风
+            //img(src='${request.contextPath}/assets/images/mall/logobig.png')
+        .search-bar.pr
+            a(name='index_none_header_sysc', href='/mall/product/detail.html')
+            form
+                input#searchInput(name='index_none_header_sysc', type='text', placeholder='搜索', autocomplete='off')
+                input#ai-topsearch.submit.am-btn(value='搜索', index='1', type='submit')
+    .clear

@@ -1,0 +1,259 @@
+// BEGIN PAGE BAR
+.page-bar
+    ul.page-breadcrumb
+        li
+            a(href='#/dashboard') 首页
+            i.fa.fa-circle
+        li
+            span 系统参数设置
+    .page-toolbar
+        .btn-group.pull-right
+            button.btn.green.btn-sm.btn-outline.dropdown-toggle(type='button', data-toggle='dropdown')
+                | Actions
+                i.fa.fa-angle-down
+            ul.dropdown-menu.pull-right(role='menu')
+                li
+                    a(href='#')
+                        i.icon-bell
+                        |  Action
+                li
+                    a(href='#')
+                        i.icon-shield
+                        |  Another action
+                li
+                    a(href='#')
+                        i.icon-user
+                        |  Something else here
+                li.divider
+                li
+                    a(href='#')
+                        i.icon-bag
+                        |  Separated link
+// END PAGE BAR
+// BEGIN PAGE TITLE
+h3.page-title
+    | 系统参数设置
+// END PAGE TITLE
+// END PAGE HEADER
+.row
+    .col-md-12
+        .portlet.light.bordered
+            .portlet-title
+                .caption.font-red-sunglo
+                    i.icon-settings.font-dark-sunglo
+                    span.caption-subject.font-dark.sbold.uppercase  系统参数配置
+                //.actions
+                    .btn-group
+                        a.btn.btn-sm.green.dropdown-toggle(href='javascript:;', data-toggle='dropdown')
+                            | 处理
+                            i.fa.fa-angle-down
+                        ul.dropdown-menu.pull-right
+                            li
+                                a(href='javascript:;')
+                                    i.fa.fa-pencil
+                                    |  编辑
+                            li
+                                a(href='javascript:;')
+                                    i.fa.fa-trash-o
+                                    |  删除
+                            li
+                                a(href='javascript:;')
+                                    i.fa.fa-ban
+                                    |  禁用
+                            li.divider
+                            li
+                                a(href='javascript:;')  Make admin
+            .portlet-body
+                .tabbable-custom
+                    ul.nav.nav-tabs
+                        li.active
+                            a(href='javascript:void(0);', data-target="#tab_base", data-toggle='tab')  基本设置
+                        li
+                            a(href='javascript:void(0);', data-target="#tab_security", data-toggle='tab')  安全设置
+                        li
+                            a(href='javascript:void(0);', data-target="#tab_SMTP", data-toggle='tab')  邮件设置
+                        li
+                            a(href='javascript:void(0);', data-target="#tab_weixin", data-toggle='tab')  微信参数设置
+                        li
+                            a(href='javascript:void(0);', data-target="#tab_SMS", data-toggle='tab')  短信平台设置
+                        li
+                            a(href='javascript:void(0);', data-target="#tab_database", data-toggle='tab')  数据库设置
+                        li
+                            a(href='javascript:void(0);', data-target="#tab_server", data-toggle='tab')  服务器设置
+                        li
+                            a(href='javascript:void(0);', data-target="#tab_other", data-toggle='tab')  其他设置
+                    .tab-content
+                        #tab_base.tab-pane.active
+                            .form
+                                .form-horizontal(role='form')
+                                    .form-body
+                                        .form-group
+                                            label.col-md-2.control-label 名称:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='名称' ng-model="companyInfo.name")
+                                                //span.help-block  数据库地址.
+                                        .form-group
+                                            label.col-md-2.control-label 地址:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='地址' ng-model="companyInfo.addr")
+                                                //span.help-block  数据库地址.
+                                        .form-group
+                                            label.col-md-2.control-label 规模:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='公司规模' ng-model="companyInfo.employees")
+                                        .form-group
+                                            label.col-md-2.control-label 主营业务:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='主营业务' ng-model="companyInfo.main_business")
+                                        .form-group
+                                            label.col-md-2.control-label 座机:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='座机' ng-model="companyInfo.tel")
+                                        .form-group
+                                            label.col-md-2.control-label 电话号码:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='电话号码' ng-model="companyInfo.mobile_number")
+                                        .form-group
+                                            label.col-md-2.control-label 法人:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='法人' ng-model="companyInfo.legal_person")
+                                        .form-group
+                                            label.col-md-2.control-label 年限:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='年限' ng-model="companyInfo.create_date")
+                                        .form-group
+                                            label.col-md-2.control-label 备注:
+                                            .col-md-6
+                                                textarea.form-control(rows="5" placeholder='备注' ng-model="companyInfo.description")
+                                    .form-actions
+                                        button.btn.blue(type='button' ng-click="config.company.update();") 确定
+                                        button.btn.default(type='button') 取消
+                        #tab_security.tab-pane
+                            .form
+                                .form-horizontal(role='form')
+                                    .form-body
+                                        .form-group
+                                            label.col-md-2.control-label IP白名单列表:
+                                            .col-md-8
+                                                textarea.form-control(rows="5" placeholder='IP白名单列表' ng-model="securityInfo.white_list")
+                                                //span.help-block  数据库地址.
+                                        .form-group
+                                            label.col-md-2.control-label IP黑名单列表:
+                                            .col-md-8
+                                                textarea.form-control(rows="5" placeholder='IP黑名单列表' ng-model="securityInfo.forbid_list")
+                                        .form-group
+                                            label.col-md-2.control-label 后台登陆失败最大次数:
+                                            .col-md-2
+                                                input.form-control(type='text', placeholder='后台登陆失败最大次数' ng-model="securityInfo.max_conn")
+                                    .form-actions
+                                        button.btn.blue(type='button' ng-click="config.security.update();") 确定
+                                        button.btn.default(type='button') 取消
+                        #tab_SMTP.tab-pane
+                            .form
+                                .form-horizontal(role='form')
+                                    .form-body
+                                        .form-group
+                                            label.col-md-2.control-label 邮件发送模式:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='邮件发送模式' ng-model="emailInfo.model")
+                                                //span.help-block  数据库地址.
+                                        .form-group
+                                            label.col-md-2.control-label SMTP服务器:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='SMTP服务器' ng-model="emailInfo.smtp_server")
+                                                //span.help-block  数据库地址.
+                                        .form-group
+                                            label.col-md-2.control-label 端口:
+                                            .col-md-2
+                                                input.form-control(type='text', placeholder='端口' ng-model="emailInfo.port")
+                                        .form-group
+                                            label.col-md-2.control-label 邮箱账号:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='邮箱账号' ng-model="emailInfo.account")
+                                        .form-group
+                                            label.col-md-2.control-label 邮箱密码:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='邮箱密码' ng-model="emailInfo.password")
+                                        .form-group
+                                            label.col-md-2.control-label 收件邮箱地址:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='收件邮箱地址' ng-model="emailInfo.receive_addr")
+                                    .form-actions
+                                        button.btn.blue(type='submit') 确定
+                                        button.btn.default(type='button') 取消
+                        #tab_weixin.tab-pane
+                            .form
+                                .form-horizontal(role='form')
+                                    .form-body
+                                        .form-group
+                                            label.col-md-2.control-label appID:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='appID')
+                                                //span.help-block  数据库地址.
+                                        .form-group
+                                            label.col-md-2.control-label appsecret:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='appsecret')
+                                                //span.help-block  数据库地址.
+                                        .form-group
+                                            label.col-md-2.control-label URL:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='URL')
+                                        .form-group
+                                            label.col-md-2.control-label Token:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='Token')
+                                    .form-actions
+                                        button.btn.blue(type='submit') 确定
+                                        button.btn.default(type='button') 取消
+                        #tab_SMS.tab-pane
+                            .form
+                                .form-horizontal(role='form')
+                                    .form-body
+                                        .form-group
+                                            label.col-md-2.control-label 短信模板:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='短信模板')
+                                                //span.help-block  数据库地址.
+                                        .form-group
+                                            label.col-md-2.control-label 短信提醒:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='短信提醒')
+                                    .form-actions
+                                        button.btn.blue(type='submit') 确定
+                                        button.btn.default(type='button') 取消
+                        #tab_database.tab-pane
+                            .form
+                                .form-horizontal(role='form')
+                                    .form-body
+                                        .form-group
+                                            label.col-md-2.control-label 数据库地址:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='数据库地址')
+                                                //span.help-block  数据库地址.
+                                        .form-group
+                                            label.col-md-2.control-label 端口:
+                                            .col-md-2
+                                                input.form-control(type='text', placeholder='端口')
+                                                //span.help-block  数据库地址.
+                                        .form-group
+                                            label.col-md-2.control-label 用户名:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='用户名')
+                                        .form-group
+                                            label.col-md-2.control-label 密码:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='密码')
+                                    .form-actions
+                                        button.btn.blue(type='submit') 确定
+                                        button.btn.default(type='button') 取消
+                        #tab_server.tab-pane
+                            .row
+                                .col-md-2
+                                    button.btn.btn-primary 启动服务器
+                                .col-md-2
+                                    button.btn.btn-danger 关闭服务器
+                                .col-md-2
+                                    button.btn.btn-success 上传war包到服务器
+                        #tab_other.tab-pane
+                            | 其他配置

@@ -1,0 +1,104 @@
+// BEGIN PAGE HEADER
+.page-bar
+    ul.page-breadcrumb
+        li
+            i.fa.fa-home
+            a(href='#/dashboard') 首页
+            i.fa.fa-angle-right
+        li
+            a(href='#/system/permission/list') 权限管理
+                i.fa.fa-angle-right
+        li
+            | 添加权限
+    //.page-toolbar
+        .btn-group.pull-right
+            button.btn.btn-sm.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', data-hover='dropdown', data-delay='1000', data-close-others='true')
+                | Actions
+                i.fa.fa-angle-down
+            ul.dropdown-menu.pull-right(role='menu')
+                li
+                    a(href='#')
+                        i.icon-user
+                        |  New User
+                li
+                    a(href='#')
+                        i.icon-present
+                        |  New Event
+                        span.badge.badge-success 4
+                li
+                    a(href='#')
+                        i.icon-basket
+                        |  New order
+                li.divider
+                li
+                    a(href='#')
+                        i.icon-flag
+                        |  Pending Orders
+                        span.badge.badge-danger 4
+                li
+                    a(href='#')
+                        i.icon-users
+                        |  Pending Users
+                        span.badge.badge-warning 12
+h3.page-title
+    | 权限添加
+// END PAGE HEADER
+// BEGIN MAIN CONTENT
+.row
+    .col-md-12
+        .portlet.light.portlet-fit.portlet-form.bordered
+            .portlet-title
+                .caption
+                    i.icon-settings.font-dark
+                    span.caption-subject.font-dark.sbold.uppercase 新增权限
+                //.actions
+                    .btn-group.btn-group-devided(data-toggle='buttons')
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm.active
+                            input#option1.toggle(type='radio', name='options')
+                            | Actions
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm
+                            input#option2.toggle(type='radio', name='options')
+                            | Settings
+            .portlet-body
+                // BEGIN FORM
+                form#form_sample_3.form-horizontal(action='#')
+                    .form-body
+                        .alert.alert-danger.display-hide
+                            button.close(data-close='alert')
+                            |  表单信息验证未通过.
+                        .alert.alert-success.display-hide
+                            button.close(data-close='alert')
+                            |  表单验证成功!
+                        .row
+                            .col-md-12
+                                .form-group
+                                    label.control-label.col-md-2
+                                        | 权限名称
+                                        span.required  *
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder="权限名称")
+                                .form-group
+                                    label.control-label.col-md-2
+                                        | 权限英文名称
+                                        span.required  *
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder="权限英文名称")
+                                .form-group
+                                    label.control-label.col-md-2
+                                        | 是否启用
+                                        span.required  *
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder="是否启用")
+                                .form-group
+                                    label.control-label.col-md-2
+                                        | 权限描述
+                                    .col-md-4
+                                        textarea.form-control(type='text', name='name', rows="5" data-required='1' placeholder="权限描述")
+                        .form-actions
+                            .row
+                                .col-md-12
+                                    button.btn.green(type='submit') 新增权限
+                                    button.btn.default(type='button') 取消
+                // END FORM
+            // END VALIDATION STATES
+

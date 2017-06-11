@@ -1,0 +1,72 @@
+// BEGIN PAGE HEADER
+.page-bar
+    ul.page-breadcrumb
+        li
+            i.fa.fa-home
+            a(href='#/dashboard') 首页
+            i.fa.fa-angle-right
+        li
+            a(href='#/system/menu') 菜单管理
+                i.fa.fa-angle-right
+        li
+            | 菜单管理
+    //.page-toolbar
+        .btn-group.pull-right
+            button.btn.btn-sm.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', data-hover='dropdown', data-delay='1000', data-close-others='true')
+                | Actions
+                i.fa.fa-angle-down
+            ul.dropdown-menu.pull-right(role='menu')
+                li
+                    a(href='#')
+                        i.icon-user
+                        |  New User
+                li
+                    a(href='#')
+                        i.icon-present
+                        |  New Event
+                        span.badge.badge-success 4
+                li
+                    a(href='#')
+                        i.icon-basket
+                        |  New order
+                li.divider
+                li
+                    a(href='#')
+                        i.icon-flag
+                        |  Pending Orders
+                        span.badge.badge-danger 4
+                li
+                    a(href='#')
+                        i.icon-users
+                        |  Pending Users
+                        span.badge.badge-warning 12
+h3.page-title
+    | 菜单管理
+// END PAGE HEADER
+// BEGIN MAIN CONTENT
+.row
+    .col-md-12
+        .portlet.light.portlet-fit.portlet-form.bordered
+            .portlet-title
+                .caption
+                    i.icon-settings.font-dark
+                    span.caption-subject.font-dark.sbold.uppercase 菜单管理
+                //.actions
+                    .btn-group.btn-group-devided(data-toggle='buttons')
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm.active
+                            input#option1.toggle(type='radio', name='options')
+                            | Actions
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm
+                            input#option2.toggle(type='radio', name='options')
+                            | Settings
+            .portlet-body
+                div(ui-tree='')
+                    ol(ui-tree-nodes='', ng-model='menus')
+                        li(ng-repeat='item in menus', ui-tree-node='')
+                            div(ui-tree-handle='')
+                                | {{item.title}}
+                            ol(ui-tree-nodes='', ng-model='item.nodes')
+                                li(ng-repeat='subItem in item.nodes', ui-tree-node='')
+                                    div(ui-tree-handle='')
+                                        | {{subItem.title}}
+

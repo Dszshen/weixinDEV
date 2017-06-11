@@ -1,0 +1,62 @@
+.modal-header
+    h4
+        | 更新角色信息
+        a.btn.btn-xs.pull-right(title='关闭' ng-click='closeModal();')
+            i.fa.fa-close
+.modal-body.app-role
+    form.form-horizontal(action='#')
+        .form-body.role-update
+            .row
+                .col-md-12
+                    .form-group
+                        label.control-label.col-md-3
+                            | 角色名称
+                            span.required  *
+                        .col-md-4
+                            input.form-control(type='text', name='', data-required='1' placeholder="角色名称" ng-model="role.cn")
+                    .form-group
+                        label.control-label.col-md-3
+                            | 角色英文名称
+                            span.required  *
+                        .col-md-4
+                            input.form-control(type='text', name='', data-required='1' placeholder="角色英文名称" ng-model="role.en")
+                    .form-group
+                        label.control-label.col-md-3
+                            | 是否启用
+                            span.required *
+                        .col-md-4
+                            switch#enabled.green.small(name='' on='启用', off='禁用' ng-model="role.state")
+                    .form-group
+                        label.control-label.col-md-3
+                            | 角色组
+                        .col-md-2(ng-show="isGroup=='no'")
+                            //select.form-control(ng-model="role.groupInfo" ng-options="groupItem.groupId as groupItem.groupName for groupItem in roleGroups")
+                            select.form-control(ng-model="role.groupInfo" ng-options="groupItem as groupItem.groupName for groupItem in roleGroups")
+                        .col-md-5
+                            .md-checkbox(style="margin-top:5px;")
+                                input.form-control.md-check(type='checkbox' id="isGroup" ng-true-value="'yes'" ng-false-value="'no'" ng-model="isGroup")
+                                label(for='isGroup')
+                                    span
+                                    span.check
+                                    span.box
+                                    |  新建角色组
+                                    small (如果所创建角色不在当前角色分组中)
+                    .form-group(ng-show="isGroup=='yes'")
+                        label.control-label.col-md-3
+                            | 角色组名称(英文字段)
+                            span.required *
+                        .col-md-4
+                            input.form-control(type='text', name='', data-required='1' placeholder="角色组名称(英文)" ng-model="role.roleGroup")
+                    .form-group(ng-show="isGroup=='yes'")
+                        label.control-label.col-md-3
+                            | 角色组中文描述
+                            span.required *
+                        .col-md-4
+                            input.form-control(type='text', name='', data-required='1' placeholder="角色组中文描述" ng-model="role.roleGroupDesc")
+                    .form-group
+                        label.control-label.col-md-3
+                            | 角色描述
+                        .col-md-5
+                            textarea.form-control(type='text', rows="5" name='', data-required='1' placeholder="角色描述" ng-model="role.description")
+.modal-footer
+    button.btn.btn-primary(type='button' ng-click="update();") 更新

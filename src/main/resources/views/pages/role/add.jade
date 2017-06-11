@@ -1,0 +1,143 @@
+// BEGIN PAGE HEADER
+.page-bar
+    ul.page-breadcrumb
+        li
+            i.fa.fa-home
+            a(href='#/dashboard') 首页
+            i.fa.fa-angle-right
+        li
+            a(href='#/role/list') 角色管理
+                i.fa.fa-angle-right
+        li
+            | 新增角色
+    .page-toolbar
+        .btn-group.pull-right
+            button.btn.btn-sm.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', data-hover='dropdown', data-delay='1000', data-close-others='true')
+                | Actions
+                i.fa.fa-angle-down
+            ul.dropdown-menu.pull-right(role='menu')
+                li
+                    a(href='#')
+                        i.icon-user
+                        |  New User
+                li
+                    a(href='#')
+                        i.icon-present
+                        |  New Event
+                        span.badge.badge-success 4
+                li
+                    a(href='#')
+                        i.icon-basket
+                        |  New order
+                li.divider
+                li
+                    a(href='#')
+                        i.icon-flag
+                        |  Pending Orders
+                        span.badge.badge-danger 4
+                li
+                    a(href='#')
+                        i.icon-users
+                        |  Pending Users
+                        span.badge.badge-warning 12
+h3.page-title
+    | 新增角色
+// END PAGE HEADER
+// BEGIN MAIN CONTENT
+.row
+    .col-md-12
+        .portlet.light.portlet-fit.portlet-form.bordered.app-role
+            .portlet-title
+                .caption
+                    i.icon-settings.font-dark
+                    span.caption-subject.font-dark.sbold.uppercase 新增角色
+                //.actions
+                    .btn-group.btn-group-devided(data-toggle='buttons')
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm.active
+                            input#option1.toggle(type='radio', name='options')
+                            | Actions
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm
+                            input#option2.toggle(type='radio', name='options')
+                            | Settings
+            .portlet-body.role-add
+                // BEGIN FORM
+                form#form_sample_3.form-horizontal(action='#')
+                    .form-body
+                        .alert.alert-danger.display-hide
+                            button.close(data-close='alert')
+                            |  表单信息验证未通过.
+                        .alert.alert-success.display-hide
+                            button.close(data-close='alert')
+                            |  表单验证成功!
+                        .row
+                            .col-md-12
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 角色名称
+                                        span.required  *
+                                    .col-md-4
+                                        input.form-control(type='text', name='', data-required='1' placeholder="角色名称" ng-model="role.cn")
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 角色英文名称
+                                        span.required  *
+                                    .col-md-4
+                                        input.form-control(type='text', name='', data-required='1' placeholder="角色英文名称" ng-model="role.en")
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 是否启用
+                                        span.required *
+                                    .col-md-4
+                                        switch#enabled.green.small(name='' on='启用', off='禁用' ng-model="role.state")
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 角色组
+                                    .col-md-2(ng-show="isGroup=='no'")
+                                        //select.form-control(ng-model="role.groupInfo" ng-options="groupItem.groupId as groupItem.groupName for groupItem in roleGroups")
+                                        select.form-control(ng-model="role.groupInfo" ng-options="groupItem as groupItem.groupName for groupItem in roleGroups")
+                                    .col-md-5
+                                        .md-checkbox(style="margin-top:5px;")
+                                            input.form-control.md-check(type='checkbox' id="isGroup" ng-true-value="'yes'" ng-false-value="'no'" ng-model="isGroup")
+                                            label(for='isGroup')
+                                                span
+                                                span.check
+                                                span.box
+                                                |  新建角色组
+                                                small (如果所创建角色不在当前角色分组中)
+                                .form-group(ng-show="isGroup=='yes'")
+                                    label.control-label.col-md-3
+                                        | 角色组名称(英文字段)
+                                        span.required *
+                                    .col-md-4
+                                        input.form-control(type='text', name='', data-required='1' placeholder="角色组名称(英文)" ng-model="role.roleGroup")
+                                .form-group(ng-show="isGroup=='yes'")
+                                    label.control-label.col-md-3
+                                        | 角色组中文描述
+                                        span.required *
+                                    .col-md-4
+                                        input.form-control(type='text', name='', data-required='1' placeholder="角色组中文描述" ng-model="role.roleGroupDesc")
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 角色描述
+                                    .col-md-5
+                                        textarea.form-control(type='text', rows="5" name='', data-required='1' placeholder="角色描述" ng-model="role.description")
+                            //.col-md-6
+                                .portlet.light.portlet-fit.full-height-content.full-height-content-scrollable.bordered
+                                    .portlet-title
+                                        .caption
+                                            i.icon-layers.font-green
+                                            span.caption-subject.font-green.bold.uppercase 角色信息
+                                    .portlet-body
+                                        .full-height-content-body
+                                            .roles-list
+                                                ul.curr-roles.clearfix
+                                                    li 角色1
+                                                    li 角色1
+                                                    li 角色1
+                                                    li 角色1
+                        .form-actions
+                            .row
+                                .col-md-12
+                                    button.btn.green(type='button' ng-click="add();") 新增角色
+                                    a.btn.default(href="#/role/list") 返回
+

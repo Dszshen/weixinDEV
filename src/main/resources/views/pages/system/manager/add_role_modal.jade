@@ -1,0 +1,29 @@
+.modal-header
+    h4
+        | 为用户添加角色
+        a.btn.btn-xs.pull-right(title='关闭' ng-click='closeModal();')
+            i.fa.fa-close
+.modal-body
+    .category-wrap(ng-repeat="roleGroup in roles")
+        .category-heading
+            .md-checkbox.has-info
+                input.md-check(type='checkbox' id="{{roleGroup.roleGroup}}" ng-true-value="'yes'" ng-false-value="'no'" ng-model="roleGroup.checked" ng-click="checkAll(roleGroup);")
+                label(for='{{roleGroup.roleGroup}}')
+                    span
+                    span.check
+                    span.box
+                    |  {{roleGroup.roleGroupName}}
+        .category-content
+            .row
+                .col-md-12
+                    .form-md-line-input
+                        .md-checkbox-inline
+                            .md-checkbox(ng-repeat="roleItem in roleGroup.items")
+                                input.md-check(type='checkbox' id="{{roleItem.id}}" ng-true-value="'yes'" ng-false-value="'no'" ng-model="roleItem.checked" ng-click="checkSingle(roleGroup);")
+                                label(for='{{roleItem.id}}')
+                                    span
+                                    span.check
+                                    span.box
+                                    |  {{roleItem.cn}}
+.modal-footer
+    button.btn.btn-primary(type='button' ng-click="updateRoleToUser();") 确定

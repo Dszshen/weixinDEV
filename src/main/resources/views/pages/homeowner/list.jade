@@ -1,0 +1,118 @@
+.page-bar
+    ul.page-breadcrumb
+        li
+            a(href='index.html') 首页
+            i.fa.fa-circle
+        li
+            span 房间档案信息
+    .page-toolbar
+        .btn-group.pull-right
+            button.btn.green.btn-sm.btn-outline.dropdown-toggle(type='button', data-toggle='dropdown')
+                | Actions
+                i.fa.fa-angle-down
+            ul.dropdown-menu.pull-right(role='menu')
+                li
+                    a(href='#')
+                        i.icon-bell
+                        |  Action
+                li
+                    a(href='#')
+                        i.icon-shield
+                        |  Another action
+                li
+                    a(href='#')
+                        i.icon-user
+                        |  Something else here
+                li.divider
+                li
+                    a(href='#')
+                        i.icon-bag
+                        |  Separated link
+// END PAGE BAR
+// BEGIN PAGE TITLE
+h3.page-title
+    | 房间档案信息
+// END PAGE TITLE
+// END PAGE HEADER
+.row
+    .col-md-12
+        // BEGIN EXAMPLE TABLE PORTLET
+        .portlet.light.bordered
+            .portlet-title
+                .caption.font-dark
+                    i.icon-settings.font-dark
+                    span.caption-subject.bold.uppercase  角色列表
+                .actions
+                    .btn-group.btn-group-devided(data-toggle='buttons')
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm.active
+                            input#option1.toggle(type='radio', name='options')
+                            | Actions
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm
+                            input#option2.toggle(type='radio', name='options')
+                            | Settings
+            .portlet-body
+                .table-toolbar
+                    .row
+                        .col-md-6
+                            .btn-group
+                                button#sample_editable_1_new.btn.sbold.green
+                                    i.fa.fa-plus
+                                    | 新增角色
+
+                        .col-md-6
+                            .btn-group.pull-right
+                                button.btn.green.btn-outline.dropdown-toggle(data-toggle='dropdown')
+                                    | 更多功能
+                                    i.fa.fa-angle-down
+                                ul.dropdown-menu.pull-right
+                                    li
+                                        a(href='javascript:;')
+                                            i.fa.fa-print
+                                            |  打印
+                                    li
+                                        a(href='javascript:;')
+                                            i.fa.fa-file-pdf-o
+                                            |  保存为PDF
+                                    li
+                                        a(href='javascript:;')
+                                            i.fa.fa-file-excel-o
+                                            |  导出为Excel
+                table#tableList.table.table-striped.table-bordered.table-hover.table-checkable.order-column
+                    thead
+                        tr
+                            th
+                                input.group-checkable(type='checkbox', data-set='#tableList .checkboxes')
+                            th  管理处
+                            th  客户编号
+                            th  业主姓名
+                            th  手机
+                            th  座机
+                            th  身份证号
+                            th  QQ号
+                            th  邮件
+                            th  生日
+                            th  交房日期
+                            th  入住日期
+                            th  收费开始日期
+                            th  操作
+                    tbody
+                        tr.odd.gradeX
+                            td
+                                input.checkboxes(type='checkbox', value='1')
+                            td  管理处1
+                            td  客户编号1
+                            td  王大锤
+                            td  13888888888
+                            td  023-88888888
+                            td  888888888888
+                            td  12345678
+                            td  email@qq.com
+                            td  19900101
+                            td  2016-04-05
+                            td  2016-04-05
+                            td  2016-04-05
+                            td
+                                span.label.label-sm.label-success 编辑
+                                span.label.label-sm.label-danger 删除
+script.
+    TableDatatablesManaged.init();

@@ -1,0 +1,108 @@
+
+/**
+table样式
+ */
+.table-op-wrap{
+  white-space: nowrap;
+}
+
+
+/**
+分类panel
+ */
+.category-wrap{
+  border:1px solid #f2f2f2;
+  padding:5px;
+  margin-top:10px;
+  .category-heading{
+    border-bottom:1px dashed #0a6aa1;
+    padding: 5px 0;
+    margin: 5px;
+  }
+  .category-content{
+    padding:5px;
+  }
+}
+
+/**
+.app-role
+ */
+.app-role{
+  /**
+  angular-ui-switch样式
+ */
+  .role-list{
+    .switch {
+      width: 50px;
+      height: 20px;
+      background: rgb(154, 160, 154);
+      border-color: rgb(172, 175, 172);
+      border-radius:20px !important;
+      small {
+        width: 20px;
+        height: 20px;
+      }
+      .on{
+        top: 15%;
+        left: 10%;
+      }
+
+      .off{
+        top: 15%;
+        right: 10%;
+        color:#fff;
+      }
+    }
+    .switch.checked {
+      background: rgb(100, 189, 99);
+      border-color: rgb(100, 189, 99);
+      small {
+        left:30px;
+      }
+    }
+  }
+  .role-add,.role-update{
+    .switch {
+      width: 66px;
+      background: rgb(154, 160, 154);
+      border-color: rgb(172, 175, 172);
+      border-radius:25px !important;
+      .on{
+      }
+      .off{
+        color:#fff;
+      }
+    }
+    .switch.checked {
+      background: rgb(100, 189, 99);
+      border-color: rgb(100, 189, 99);
+      small {
+        left:36px;
+      }
+    }
+
+    .roles-list{
+      border:1px solid #eee;
+      padding:15px 20px;
+      ul{
+        margin:0;
+        padding:0;
+        li{
+          list-style: none;
+          float: left;
+          margin-left:20px;
+          font-size: 16px;
+        }
+        li:first-child{
+          margin-left:0;
+        }
+      }
+
+      ul.curr-roles{
+        li{
+          color: #e85302;
+        }
+      }
+    }
+  }
+}

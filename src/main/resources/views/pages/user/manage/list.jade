@@ -1,0 +1,124 @@
+// BEGIN PAGE HEADER
+.page-bar
+    ul.page-breadcrumb
+        li
+            i.fa.fa-home
+            a(href='#/index') 首页
+            i.fa.fa-angle-right
+        li
+            a(href='#/user/list') 用户管理
+                i.fa.fa-angle-right
+        li
+            | 用户列表
+    .page-toolbar
+        .btn-group.pull-right
+            button.btn.btn-sm.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', data-hover='dropdown', data-delay='1000', data-close-others='true')
+                | Actions
+                i.fa.fa-angle-down
+            ul.dropdown-menu.pull-right(role='menu')
+                li
+                    a(href='#')
+                        i.icon-user
+                        |  New User
+                li
+                    a(href='#')
+                        i.icon-present
+                        |  New Event
+                        span.badge.badge-success 4
+                li
+                    a(href='#')
+                        i.icon-basket
+                        |  New order
+                li.divider
+                li
+                    a(href='#')
+                        i.icon-flag
+                        |  Pending Orders
+                        span.badge.badge-danger 4
+                li
+                    a(href='#')
+                        i.icon-users
+                        |  Pending Users
+                        span.badge.badge-warning 12
+h3.page-title
+    | 用户管理
+// END PAGE HEADER
+// BEGIN MAIN CONTENT
+.row
+    .col-md-12
+        // BEGIN EXAMPLE TABLE PORTLET
+        .portlet.light.bordered
+            .portlet-title
+                .caption.font-dark
+                    i.icon-settings.font-dark
+                    span.caption-subject.bold.uppercase  用户列表
+                .actions
+                    .btn-group.btn-group-devided(data-toggle='buttons')
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm.active
+                            input#option1.toggle(type='radio', name='options')
+                            | Actions
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm
+                            input#option2.toggle(type='radio', name='options')
+                            | Settings
+            .portlet-body
+                .table-toolbar
+                    .row
+                        .col-md-6
+                            .btn-group
+                                a#addUser.btn.sbold.green(href="#/user/add")
+                                    i.fa.fa-plus
+                                    | 新增用户
+
+                        .col-md-6
+                            .btn-group.pull-right
+                                button.btn.green.btn-outline.dropdown-toggle(data-toggle='dropdown')
+                                    | 更多功能
+                                    i.fa.fa-angle-down
+                                ul.dropdown-menu.pull-right
+                                    li
+                                        a(href='javascript:;')
+                                            i.fa.fa-print
+                                            |  打印
+                                    li
+                                        a(href='javascript:;')
+                                            i.fa.fa-file-pdf-o
+                                            |  保存为PDF
+                                    li
+                                        a(href='javascript:;')
+                                            i.fa.fa-file-excel-o
+                                            |  导出为Excel
+                table#tableList.table.table-striped.table-bordered.table-hover.table-checkable.order-column
+                    thead
+                        tr
+                            th
+                                input.group-checkable(type='checkbox', data-set='#tableList .checkboxes')
+                            th  用户名
+                            th  昵称
+                            th  真实姓名
+                            th  手机号
+                            th  邮箱
+                            th  QQ
+                            th  注册时间
+                            th  添加角色
+                            th  操作
+                    tbody
+                        tr.odd.gradeX(ng-repeat="user in userList")
+                            td
+                                input.checkboxes(type='checkbox', value='1')
+                            td  {{user.username}}
+                            td  {{user.nickName}}
+                            td  {{user.realName}}
+                            td  {{user.mobile}}
+                            td  {{user.email}}
+                            td  {{user.qq}}
+                            td  {{user.createTime}}
+                            td
+                                button.btn.btn-xs.btn-success(ng-click="addRole('{{user.id}}');") 添加角色
+                            td
+                                span.label.label-sm.label-success 编辑
+                                span.label.label-sm.label-danger 删除
+// END MAIN CONTENT
+// BEGIN MAIN JS
+script.
+    TableDatatablesManaged.init();
+// END MAIN JS

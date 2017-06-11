@@ -1,0 +1,107 @@
+doctype html
+html(lang='en', data-ng-app='XXAPP')
+    // BEGIN HEAD
+    head
+        - var currTime = new Date().getTime();
+        title(data-ng-bind="'XX管理系统 | ' + $state.current.data.pageTitle")
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(content='width=device-width, initial-scale=1', name='viewport')
+        meta(content='', name='description')
+        meta(content='', name='author')
+        link(href='${request.contextPath}/assets/libs/fontawesome/css/font-awesome.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link(href='${request.contextPath}/assets/libs/simple-line-icons/css/simple-line-icons.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link(href='${request.contextPath}/assets/libs/bootstrap/dist/css/bootstrap.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link(href='${request.contextPath}/assets/libs/jquery-uniform/css/uniform.default.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link(href='${request.contextPath}/assets/libs/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link(href='${request.contextPath}/assets/libs/jstree/dist/themes/default/style.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link(href='${request.contextPath}/assets/libs/angular-ui-tree/dist/angular-ui-tree.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link(href='${request.contextPath}/assets/libs/angular-ui-notification/dist/angular-ui-notification.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link#css_lazyload
+        link#style_components(href='${request.contextPath}/assets/css/components.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link(href='${request.contextPath}/assets/css/plugins.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link(href='${request.contextPath}/assets/css/layouts/layout.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link#style_color(href='${request.contextPath}/assets/css/layouts/themes/darkblue.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link(href='${request.contextPath}/assets/css/layouts/custom.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        link(href='${request.contextPath}/assets/css/style.css?t=#{currTime}', rel='stylesheet', type='text/css')
+        // END THEME STYLES
+        link(rel='shortcut icon', href='${request.contextPath}/assets/images/favicon.ico?t=#{currTime}')
+    body.page-header-fixed.page-sidebar-closed-hide-logo.page-on-load(ng-controller='AppController', ng-class="{'page-content-white': settings.layout.pageContentWhite,'page-container-bg-solid': settings.layout.pageBodySolid, 'page-sidebar-closed': settings.layout.pageSidebarClosed}")
+        // BEGIN PAGE SPINNER
+        .page-spinner-bar(ng-spinner-bar='')
+            .bounce1
+            .bounce2
+            .bounce3
+        // END PAGE SPINNER
+        // BEGIN HEADER
+        .page-header.navbar.navbar-fixed-top(data-ng-include="'/template/header.html'", data-ng-controller='HeaderController')
+        // END HEADER
+        .clearfix
+        // BEGIN CONTAINER
+        .page-container
+            // BEGIN SIDEBAR
+            .page-sidebar-wrapper(data-ng-include="'/template/sidebar.html'", data-ng-controller='SidebarController')
+            // END SIDEBAR
+            // BEGIN CONTENT
+            .page-content-wrapper
+                .page-content
+                    // BEGIN STYLE CUSTOMIZER(optional)
+                    .theme-panel.hidden-xs.hidden-sm(data-ng-include="'/template/theme-panel.html'", data-ng-controller='ThemePanelController')
+                    // END STYLE CUSTOMIZER
+                    // BEGIN ACTUAL CONTENT
+                    .fade-in-up(ui-view='')
+                    // END ACTUAL CONTENT
+            // END CONTENT
+            // BEGIN QUICK SIDEBAR
+            a.page-quick-sidebar-toggler(href='javascript:;')
+                i.icon-login
+            .page-quick-sidebar-wrapper(data-ng-include="'/template/quick-sidebar.html'", data-ng-controller='QuickSidebarController')
+            // END QUICK SIDEBAR
+        // END CONTAINER
+        // BEGIN FOOTER
+        .page-footer(data-ng-include="'/template/footer.html'", data-ng-controller='FooterController')
+        script.
+            var currTime='#{currTime}';
+            var CONTEXT = '${request.contextPath}';
+        script(src='${request.contextPath}/assets/libs/jquery/dist/jquery.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/bootstrap/dist/js/bootstrap.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/jquery-slimscroll/jquery.slimscroll.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/blockUI/jquery.blockUI.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/js-cookie/src/js.cookie.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/jquery-uniform/jquery.uniform.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/bootstrap-switch/dist/js/bootstrap-switch.min.js?t=#{currTime}', type='text/javascript')
+        // END CORE JQUERY libs
+        // BEGIN CORE ANGULARJS libs
+        script(src='${request.contextPath}/assets/libs/angular/angular.min.js?t=#{currTime}', type='text/javascript')
+        //script(src='${request.contextPath}/assets/libs/angular-route/angular-route.min.js', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/angular-sanitize/angular-sanitize.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/angular-bootstrap/ui-bootstrap.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/angular-touch/angular-touch.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/angular-ui-router/release/angular-ui-router.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/ocLazyLoad/dist/ocLazyLoad.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/angular-bootstrap/ui-bootstrap-tpls.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/angular-bootstrap-switch/dist/angular-bootstrap-switch.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/angular-scroll/angular-scroll.min.js?t=#{currTime}', type='text/javascript')
+        //script(src='${request.contextPath}/assets/libs/angular-ui-router-tabs/src/ui-router-tabs.js', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/jstree/dist/jstree.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/ng-js-tree/dist/ngJsTree.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/angular-ui-tree/dist/angular-ui-tree.min.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/angular-ui-notification/dist/angular-ui-notification.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/libs/angular-ui-switch/angular-ui-switch.js?t=#{currTime}', type='text/javascript')
+        // END CORE ANGULARJS libs
+        // BEGIN APP LEVEL ANGULARJS SCRIPTS
+        script#js_lazyload
+        //script(src='${request.contextPath}/assets/js/directives/directives.js', type='text/javascript')
+        // END APP LEVEL ANGULARJS SCRIPTS
+        // BEGIN APP LEVEL JQUERY SCRIPTS
+        script(src='${request.contextPath}/assets/scripts/global/app.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/scripts/global/layout.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/scripts/global/quick-sidebar.js?t=#{currTime}', type='text/javascript')
+        script(src='${request.contextPath}/assets/scripts/global/theme.js?t=#{currTime}', type='text/javascript')
+
+        script(src='${request.contextPath}/assets/js/app.js?t=#{currTime}', type='text/javascript')
+        //script(src='${request.contextPath}/assets/js/directives/directives.js', type='text/javascript')
+        // END APP LEVEL JQUERY SCRIPTS
+        // END JAVASCRIPTS
+    // END BODY

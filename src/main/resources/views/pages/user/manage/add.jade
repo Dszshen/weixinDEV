@@ -1,0 +1,143 @@
+// BEGIN PAGE HEADER
+.page-bar
+    ul.page-breadcrumb
+        li
+            i.fa.fa-home
+            a(href='#/index') 首页
+            i.fa.fa-angle-right
+        li
+            a(href='#/user/list') 用户管理
+                i.fa.fa-angle-right
+        li
+            | 添加用户
+    //.page-toolbar
+        .btn-group.pull-right
+            button.btn.btn-sm.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', data-hover='dropdown', data-delay='1000', data-close-others='true')
+                | Actions
+                i.fa.fa-angle-down
+            ul.dropdown-menu.pull-right(role='menu')
+                li
+                    a(href='#')
+                        i.icon-user
+                        |  New User
+                li
+                    a(href='#')
+                        i.icon-present
+                        |  New Event
+                        span.badge.badge-success 4
+                li
+                    a(href='#')
+                        i.icon-basket
+                        |  New order
+                li.divider
+                li
+                    a(href='#')
+                        i.icon-flag
+                        |  Pending Orders
+                        span.badge.badge-danger 4
+                li
+                    a(href='#')
+                        i.icon-users
+                        |  Pending Users
+                        span.badge.badge-warning 12
+h3.page-title
+    | 添加用户
+// END PAGE HEADER
+// BEGIN MAIN CONTENT
+.row
+    .col-md-12
+        .portlet.light.portlet-fit.portlet-form.bordered
+            .portlet-title
+                .caption
+                    i.icon-settings.font-dark
+                    span.caption-subject.font-dark.sbold.uppercase 新增用户
+                .actions
+                    .btn-group.btn-group-devided(data-toggle='buttons')
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm.active
+                            input#option1.toggle(type='radio', name='options')
+                            | Actions
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm
+                            input#option2.toggle(type='radio', name='options')
+                            | Settings
+            .portlet-body
+                // BEGIN FORM
+                form#form_sample_3.form-horizontal(action='#')
+                    .form-body
+                        .alert.alert-danger.display-hide
+                            button.close(data-close='alert')
+                            |  表单信息验证未通过.
+                        .alert.alert-success.display-hide
+                            button.close(data-close='alert')
+                            |  表单验证成功!
+                        .row
+                            .col-md-6
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 真实姓名
+                                        span.required  *
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 昵称
+                                        span.required  *
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 电话
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | QQ
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 邮箱
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 地址
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 身份证号
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1')
+                            .col-md-6
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 生日
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 所在城市
+                                    .col-md-4
+                                        select.form-control.select2me(name='options2')
+                                            option(value='') -请选择-
+                                            option(value='Option 1') 正在装修 1
+                                            option(value='Option 2') 已完成装修 2
+                                            option(value='Option 3') 未装修 3
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 紧急联系人
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 紧急联系人电话
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1')
+                        .form-actions
+                            .row
+                                .col-md-12
+                                    button.btn.green(type='submit') 新增用户
+                                    button.btn.default(type='button') 取消
+                // END FORM
+            // END VALIDATION STATES
+

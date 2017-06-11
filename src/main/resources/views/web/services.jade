@@ -1,0 +1,192 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='description', content='')
+        meta(name='author', content='Mosaddek')
+        meta(name='keyword', content='FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina')
+        link(rel='shortcut icon', href='/assets/images/web/favicon.png')
+        title XX网站 | 服务
+        include common/header
+    body
+        include common/nav
+        // breadcrumbs start
+        .breadcrumbs
+            .container
+                .row
+                    .col-lg-4.col-sm-4
+                        h1 Services
+                    .col-lg-8.col-sm-8
+                        ol.breadcrumb.pull-right
+                            li
+                                a(href='#') Home
+                            li
+                                a(href='#') Pages
+                            li.active Services
+        // breadcrumbs end
+        // container start
+        .container
+            .row.mbot50
+                .col-lg-7.about
+                    h3 Lorem ispsum dolor emnet.
+                    p
+                        | Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore dolore magnm aliquam quaerat voluptatem.
+                    p
+                        | Aenean nibh ante, lacinia non tincidunt nec, lobortis ut tellus. Sed in porta diam. Suspendisse potenti. Donec luctus ullamcorper nulla. Duis nec velit odio.
+                .col-lg-5
+                    .span5.about-carousel
+                        #myCarousel.carousel.slide
+                            // Carousel items
+                            .carousel-inner
+                                .active.item
+                                    img(src='/assets/images/web/about_1.jpg', alt='')
+                                    .carousel-caption
+                                        p Donec luctus ullamcorper nulla
+                                .item
+                                    img(src='/assets/images/web/about_2.jpg', alt='')
+                                    .carousel-caption
+                                        p Blanditiis praesentium voluptatum
+                                .item
+                                    img(src='/assets/images/web/about_1.jpg', alt='')
+                                    .carousel-caption
+                                        p Honest and amazing things that bring positive results
+                            // Carousel nav
+                            a.carousel-control.left(href='#myCarousel', data-slide='prev')
+                                i.fa.fa-angle-left
+                            a.carousel-control.right(href='#myCarousel', data-slide='next')
+                                i.fa.fa-angle-right
+        .gray-box.mbot50
+            .container
+                .row
+                    .row
+                        .text-center.feature-head
+                            h1  Our Services
+                            p
+                                | Aenean nibh ante, lacinia non tincidunt nec, lobortis ut tellus. Sed in porta diam.
+                        .services
+                            .col-lg-6.col-sm-6
+                                .icon-wrap.ico-bg.round
+                                    i.fa.fa-desktop
+                                .content
+                                    h3.title Responsive Design
+                                    p
+                                        | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                            .col-lg-6.col-sm-6
+                                .icon-wrap.ico-bg.round
+                                    i.fa.fa-gift
+                                .content
+                                    h3.title HTML5 & CSS3
+                                    p
+                                        | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                        .services
+                            .col-lg-6.col-sm-6
+                                .icon-wrap.ico-bg.round
+                                    i.fa.fa-code
+                                .content
+                                    h3.title Friendly Coding
+                                    p
+                                        | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                            .col-lg-6.col-sm-6
+                                .icon-wrap.ico-bg.round
+                                    i.fa.fa-book
+                                .content
+                                    h3.title Well Documention
+                                    p
+                                        | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                        .services
+                            .col-lg-6.col-sm-6
+                                .icon-wrap.ico-bg.round
+                                    i.fa.fa-bullhorn
+                                .content
+                                    h3.title Free Support
+                                    p
+                                        | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                            .col-lg-6.col-sm-6
+                                .icon-wrap.ico-bg.round
+                                    i.fa.fa-eye-open
+                                .content
+                                    h3.title Bootstrap 3
+                                    p
+                                        | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+        .container
+            .row
+                .col-lg-12
+                    h3.skills Other Services
+                    p
+                        | Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores tium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi archgit, magnam aliquam quaerat voluptatem. Asunt in anim uis aute irure dolor ins. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes ser.
+                    section.panel.mtop30.tab
+                        header.panel-heading.service-tab.tab-bg-dark-navy-blue
+                            ul.nav.nav-tabs.nav-justified
+                                li.active
+                                    a(data-toggle='tab', href='#service1')
+                                        | service #1
+                                li
+                                    a(data-toggle='tab', href='#service2')
+                                        | service #2
+                                li
+                                    a(data-toggle='tab', href='#service3')
+                                        | service #3
+                                li
+                                    a(data-toggle='tab', href='#service4')
+                                        | service #4
+                                li
+                                    a(data-toggle='tab', href='#service5')
+                                        | service #5
+                        .panel-body
+                            .tab-content.tasi-tab
+                                #service1.tab-pane.active
+                                    .services
+                                        .icon-wrap.ico-bg.round
+                                            i.fa.fa-bullhorn
+                                        .content
+                                            p
+                                                | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                                | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                            p
+                                                | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                #service2.tab-pane
+                                    .services
+                                        .icon-wrap.ico-bg.round
+                                            i.fa.fa-tint
+                                        .content
+                                            p
+                                                | Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores tium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi archgit, magnam aliquam quaerat voluptatem. Asunt in anim uis aute irure dolor ins. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes ser.
+                                            p
+                                                | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                                | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                            p
+                                                | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                #service3.tab-pane
+                                    .services
+                                        .icon-wrap.ico-bg.round
+                                            i.fa.fa-umbrella
+                                        .content
+                                            p
+                                                | Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                                | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                            p
+                                                | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                #service4.tab-pane
+                                    .services
+                                        .icon-wrap.ico-bg.round
+                                            i.fa.fa-suitcase
+                                        .content
+                                            p
+                                                | Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores tium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi archgit, magnam aliquam quaerat voluptatem. Asunt in anim uis aute irure dolor ins. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes ser.
+                                            p
+                                                | Sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                            p
+                                                | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                #service5.tab-pane
+                                    .services
+                                        .icon-wrap.ico-bg.round
+                                            i.fa.fa-trophy
+                                        .content
+                                            p
+                                                | Tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                                | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+                                            p
+                                                | Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere. Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
+        // container end
+        include common/footer

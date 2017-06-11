@@ -1,0 +1,430 @@
+doctype html
+html
+    head
+        title 个人中心
+        include ../common/head
+        link(href='${request.contextPath}/assets/css/mall/personal.css', rel='stylesheet', type='text/css')
+        link(href='${request.contextPath}/assets/css/mall/systyle.css', rel='stylesheet', type='text/css')
+    body
+        include ../common/header
+        .nav-table
+            .long-title
+                span.all-goods 全部分类
+            include ../common/nav
+            //.nav-cont
+                ul
+                    li.index
+                        a(href='#') 首页
+                    li.qc
+                        a(href='#') 闪购
+                    li.qc
+                        a(href='#') 限时抢
+                    li.qc
+                        a(href='#') 团购
+                    li.qc.last
+                        a(href='#') 大包装
+                .nav-extra
+                    i.am-icon-user-secret.am-icon-md.nav-user
+                    b
+                    | 我的福利
+                    i.am-icon-angle-right(style='padding-left: 10px;')
+        b.line
+        .center
+            .col-main
+                .main-wrap
+                    .wrap-left
+                        .wrap-list
+                            .m-user
+                                // 个人信息
+                                .m-bg
+                                .m-userinfo
+                                    .m-baseinfo
+                                        a(href='information.html')
+                                            img(src='${request.contextPath}/assets/images/mall/getAvatar.do.jpg')
+                                        em.s-name
+                                            | (小叮当)
+                                            span.vip1
+                                        .s-prestige.am-btn.am-round
+                                            | 会员福利
+                                    .m-right
+                                        .m-new
+                                            a(href='news.html')
+                                                i.am-icon-bell-o
+                                                | 消息
+                                        .m-address
+                                            a.i-trigger(href='address.html') 我的收货地址
+                                // 个人资产
+                                .m-userproperty
+                                    .s-bar
+                                        i.s-icon
+                                        | 个人资产
+                                    p.m-bonus
+                                        a(href='bonus.html')
+                                            i
+                                                img(src='${request.contextPath}/assets/images/mall/bonus.png')
+                                            span.m-title 红包
+                                            em.m-num 2
+                                    p.m-coupon
+                                        a(href='coupon.html')
+                                            i
+                                                img(src='${request.contextPath}/assets/images/mall/coupon.png')
+                                            span.m-title 优惠券
+                                            em.m-num 2
+                                    p.m-bill
+                                        a(href='bill.html')
+                                            i
+                                                img(src='${request.contextPath}/assets/images/mall/wallet.png')
+                                            span.m-title 钱包
+                                            em.m-num 2
+                                    p.m-big
+                                        a(href='#')
+                                            i
+                                                img(src='${request.contextPath}/assets/images/mall/day-to.png')
+                                            span.m-title 签到有礼
+                                    p.m-big
+                                        a(href='#')
+                                            i
+                                                img(src='${request.contextPath}/assets/images/mall/72h.png')
+                                            span.m-title 72小时发货
+                            .box-container-bottom
+                            // 订单
+                            .m-order
+                                .s-bar
+                                    i.s-icon
+                                    | 我的订单
+                                    a.i-load-more-item-shadow(href='order.html') 全部订单
+                                ul
+                                    li
+                                        a(href='order.html')
+                                            i
+                                                img(src='${request.contextPath}/assets/images/mall/pay.png')
+                                            span 待付款
+                                    li
+                                        a(href='order.html')
+                                            i
+                                                img(src='${request.contextPath}/assets/images/mall/send.png')
+                                            span
+                                                | 待发货
+                                                em.m-num 1
+                                    li
+                                        a(href='order.html')
+                                            i
+                                                img(src='${request.contextPath}/assets/images/mall/receive.png')
+                                            span 待收货
+                                    li
+                                        a(href='order.html')
+                                            i
+                                                img(src='${request.contextPath}/assets/images/mall/comment.png')
+                                            span
+                                                | 待评价
+                                                em.m-num 3
+                                    li
+                                        a(href='change.html')
+                                            i
+                                                img(src='${request.contextPath}/assets/images/mall/refund.png')
+                                            span 退换货
+                            // 九宫格
+                            .user-patternIcon
+                                .s-bar
+                                    i.s-icon
+                                    | 我的常用
+                                ul
+                                    a(href='../home/shopcart.html')
+                                        li.am-u-sm-4
+                                            i.am-icon-shopping-basket.am-icon-md
+                                            img(src='${request.contextPath}/assets/images/mall/iconbig.png')
+                                            p 购物车
+                                    a(href='collection.html')
+                                        li.am-u-sm-4
+                                            i.am-icon-heart.am-icon-md
+                                            img(src='${request.contextPath}/assets/images/mall/iconsmall1.png')
+                                            p 我的收藏
+                                    a(href='../home/home.html')
+                                        li.am-u-sm-4
+                                            i.am-icon-gift.am-icon-md
+                                            img(src='${request.contextPath}/assets/images/mall/iconsmall0.png')
+                                            p 为你推荐
+                                    a(href='comment.html')
+                                        li.am-u-sm-4
+                                            i.am-icon-pencil.am-icon-md
+                                            img(src='${request.contextPath}/assets/images/mall/iconsmall3.png')
+                                            p 好评宝贝
+                                    a(href='foot.html')
+                                        li.am-u-sm-4
+                                            i.am-icon-clock-o.am-icon-md
+                                            img(src='${request.contextPath}/assets/images/mall/iconsmall2.png')
+                                            p 我的足迹
+                            // 物流
+                            .m-logistics
+                                .s-bar
+                                    i.s-icon
+                                    | 我的物流
+                                .s-content
+                                    ul.lg-list
+                                        li.lg-item
+                                            .item-info
+                                                a(href='#')
+                                                    img(src='${request.contextPath}/assets/images/mall/65.jpg_120x120xz.jpg', alt='抗严寒冬天保暖隔凉羊毛毡底鞋垫超薄0.35厘米厚吸汗排湿气舒适')
+                                            .lg-info
+                                                p 快件已从 义乌 发出
+                                                time 2015-12-20 17:58:05
+                                                .lg-detail-wrap
+                                                    a.lg-detail.i-tip-trigger(href='logistics.html') 查看物流明细
+                                                    .J_TipsCon.hide
+                                                        .s-tip-bar 中通快递    运单号：373269427686
+                                                        .s-tip-content
+                                                            ul
+                                                                li 快件已从 义乌 发出2015-12-20 17:58:05
+                                                                li 义乌 的 义乌总部直发车 已揽件2015-12-20 17:54:49
+                                                                li.s-omit
+                                                                    a(data-spm-anchor-id='a1z02.1.1998049142.3', target='_blank', href='#') ··· 查看全部
+                                                                li 您的订单开始处理2015-12-20 08:13:48
+                                            .lg-confirm
+                                                a.i-btn-typical(href='#') 确认收货
+                                        .clear
+                                        li.lg-item
+                                            .item-info
+                                                a(href='#')
+                                                    img(src='${request.contextPath}/assets/images/mall/88.jpg_120x120xz.jpg', alt='礼盒袜子女秋冬 纯棉袜加厚 女式中筒袜子 韩国可爱 女袜 女棉袜')
+                                            .lg-info
+                                                p 已签收,签收人是青年城签收
+                                                time 2015-12-19 15:35:42
+                                                .lg-detail-wrap
+                                                    a.lg-detail.i-tip-trigger(href='logistics.html') 查看物流明细
+                                                    .J_TipsCon.hide
+                                                        .s-tip-bar 天天快递    运单号：666287461069
+                                                        .s-tip-content
+                                                            ul
+                                                                li 已签收,签收人是青年城签收2015-12-19 15:35:42
+                                                                li 【光谷关山分部】的派件员【关山代派】正在派件 电话:*2015-12-19 14:27:28
+                                                                li.s-omit
+                                                                    a(data-spm-anchor-id='a1z02.1.1998049142.7', target='_blank', href='//wuliu.taobao.com/user/order_detail_new.htm?spm=a1z02.1.1998049142.7.8BJBiJ&trade_id=1479374251166800&seller_id=1651462988&tracelog=yimaidaologistics') ··· 查看全部
+                                                                li 您的订单开始处理2015-12-17 14:27:50
+                                            .lg-confirm
+                                                a.i-btn-typical(href='#') 确认收货
+                            // 收藏夹
+                            .you-like
+                                .s-bar
+                                    | 我的收藏
+                                    a.am-badge.am-badge-danger.am-round 降价
+                                    a.am-badge.am-badge-danger.am-round 下架
+                                    a.i-load-more-item-shadow(href='#')
+                                        i.am-icon-refresh.am-icon-fw
+                                        | 换一组
+                                .s-content
+                                    .s-item-wrap
+                                        .s-item
+                                            .s-pic
+                                                a.s-pic-link(href='#')
+                                                    img.s-pic-img.s-guess-item-img(src='${request.contextPath}/assets/images/mall/0-item_pic.jpg_220x220.jpg', alt='包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰', title='包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰')
+                                            .s-price-box
+                                                span.s-price
+                                                    em.s-price-sign ¥
+                                                    em.s-value 42.50
+                                                span.s-history-price
+                                                    em.s-price-sign ¥
+                                                    em.s-value 68.00
+                                            .s-title
+                                                a(href='#', title='包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰') 包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰
+                                            .s-extra-box
+                                                span.s-comment 好评: 98.03%
+                                                span.s-sales 月销: 219
+                                    .s-item-wrap
+                                        .s-item
+                                            .s-pic
+                                                a.s-pic-link(href='#')
+                                                    img.s-pic-img.s-guess-item-img(src='${request.contextPath}/assets/images/mall/1-item_pic.jpg_220x220.jpg', alt='s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰', title='s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰')
+                                            .s-price-box
+                                                span.s-price
+                                                    em.s-price-sign ¥
+                                                    em.s-value 49.90
+                                                span.s-history-price
+                                                    em.s-price-sign ¥
+                                                    em.s-value 88.00
+                                            .s-title
+                                                a(href='#', title='s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰') s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰
+                                            .s-extra-box
+                                                span.s-comment 好评: 99.74%
+                                                span.s-sales 月销: 69
+                                    .s-item-wrap
+                                        .s-item
+                                            .s-pic
+                                                a.s-pic-link(href='#')
+                                                    img.s-pic-img.s-guess-item-img(src='${request.contextPath}/assets/images/mall/-0-saturn_solar.jpg_220x220.jpg', alt='4折抢购!十二生肖925银女戒指,时尚开口女戒', title='4折抢购!十二生肖925银女戒指,时尚开口女戒')
+                                            .s-price-box
+                                                span.s-price
+                                                    em.s-price-sign ¥
+                                                    em.s-value 378.00
+                                                span.s-history-price
+                                                    em.s-price-sign ¥
+                                                    em.s-value 1888.00
+                                            .s-title
+                                                a(href='#', title='4折抢购!十二生肖925银女戒指,时尚开口女戒') 4折抢购!十二生肖925银女戒指,时尚开口女戒
+                                            .s-extra-box
+                                                span.s-comment 好评: 99.93%
+                                                span.s-sales 月销: 278
+                                    .s-item-wrap
+                                        .s-item
+                                            .s-pic
+                                                a.s-pic-link(href='#')
+                                                    img.s-pic-img.s-guess-item-img(src='${request.contextPath}/assets/images/mall/0-item_pic.jpg_220x220.jpg', alt='包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰', title='包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰')
+                                            .s-price-box
+                                                span.s-price
+                                                    em.s-price-sign ¥
+                                                    em.s-value 42.50
+                                                span.s-history-price
+                                                    em.s-price-sign ¥
+                                                    em.s-value 68.00
+                                            .s-title
+                                                a(href='#', title='包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰') 包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰
+                                            .s-extra-box
+                                                span.s-comment 好评: 98.03%
+                                                span.s-sales 月销: 219
+                                    .s-item-wrap
+                                        .s-item
+                                            .s-pic
+                                                a.s-pic-link(href='#')
+                                                    img.s-pic-img.s-guess-item-img(src='${request.contextPath}/assets/images/mall/1-item_pic.jpg_220x220.jpg', alt='s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰', title='s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰')
+                                            .s-price-box
+                                                span.s-price
+                                                    em.s-price-sign ¥
+                                                    em.s-value 49.90
+                                                span.s-history-price
+                                                    em.s-price-sign ¥
+                                                    em.s-value 88.00
+                                            .s-title
+                                                a(href='#', title='s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰') s925纯银千纸鹤锁骨链短款简约时尚韩版素银项链小清新秋款女配饰
+                                            .s-extra-box
+                                                span.s-comment 好评: 99.74%
+                                                span.s-sales 月销: 69
+                                    .s-item-wrap
+                                        .s-item
+                                            .s-pic
+                                                a.s-pic-link(href='#')
+                                                    img.s-pic-img.s-guess-item-img(src='${request.contextPath}/assets/images/mall/-0-saturn_solar.jpg_220x220.jpg', alt='4折抢购!十二生肖925银女戒指,时尚开口女戒', title='4折抢购!十二生肖925银女戒指,时尚开口女戒')
+                                            .s-price-box
+                                                span.s-price
+                                                    em.s-price-sign ¥
+                                                    em.s-value 378.00
+                                                span.s-history-price
+                                                    em.s-price-sign ¥
+                                                    em.s-value 1888.00
+                                            .s-title
+                                                a(href='#', title='4折抢购!十二生肖925银女戒指,时尚开口女戒') 4折抢购!十二生肖925银女戒指,时尚开口女戒
+                                            .s-extra-box
+                                                span.s-comment 好评: 99.93%
+                                                span.s-sales 月销: 278
+                                .s-more-btn.i-load-more-item(data-screen='0')
+                                    i.am-icon-refresh.am-icon-fw
+                                    | 更多
+                    .wrap-right
+                        // 日历
+                        .day-list
+                            .s-bar
+                                a.i-history-trigger.s-icon(href='#')
+                                | 我的日历
+                                a.i-setting-trigger.s-icon(href='#')
+                            .s-care.s-care-noweather
+                                .s-date
+                                    em 21
+                                    span 星期一
+                                    span 2015.12
+                        // 新品
+                        .new-goods
+                            .s-bar
+                                i.s-icon
+                                | 今日新品
+                                a.i-load-more-item-shadow 15款新品
+                            .new-goods-info
+                                a.shop-info(href='#', target='_blank')
+                                    .face-img-panel
+                                        img(src='${request.contextPath}/assets/images/mall/imgsearch1.jpg', alt='')
+                                    span.new-goods-num 4
+                                    span.shop-title 剥壳松子
+                                a.follow(target='_blank') 关注
+                        // 热卖推荐
+                        .new-goods
+                            .s-bar
+                                i.s-icon
+                                | 热卖推荐
+                            .new-goods-info
+                                a.shop-info(href='#', target='_blank')
+                                    div
+                                        img(src='${request.contextPath}/assets/images/mall/imgsearch1.jpg', alt='')
+                                    span.one-hot-goods ￥9.20
+                // 底部
+                .footer
+                    .footer-hd
+                        p
+                            a(href='#') 恒望科技
+                            b |
+                            a(href='#') 商城首页
+                            b |
+                            a(href='#') 支付宝
+                            b |
+                            a(href='#') 物流
+                    .footer-bd
+                        p
+                            a(href='#') 关于恒望
+                            a(href='#') 合作伙伴
+                            a(href='#') 联系我们
+                            a(href='#') 网站地图
+                            em © 2015-2025 Hengwang.com 版权所有
+            aside.menu
+                ul
+                    li.person.active
+                        a(href='index.html') 个人中心
+                    li.person
+                        a(href='#') 个人资料
+                        ul
+                            li
+                                a(href='information.html') 个人信息
+                            li
+                                a(href='safety.html') 安全设置
+                            li
+                                a(href='address.html') 收货地址
+                    li.person
+                        a(href='#') 我的交易
+                        ul
+                            li
+                                a(href='order.html') 订单管理
+                            li
+                                a(href='change.html') 退款售后
+                    li.person
+                        a(href='#') 我的资产
+                        ul
+                            li
+                                a(href='coupon.html') 优惠券 
+                            li
+                                a(href='bonus.html') 红包
+                            li
+                                a(href='bill.html') 账单明细
+                    li.person
+                        a(href='#') 我的小窝
+                        ul
+                            li
+                                a(href='collection.html') 收藏
+                            li
+                                a(href='foot.html') 足迹
+                            li
+                                a(href='comment.html') 评价
+                            li
+                                a(href='news.html') 消息
+        // 引导
+        .navCir
+            li
+                a(href='../home/home.html')
+                    i.am-icon-home
+                    | 首页
+            li
+                a(href='../home/sort.html')
+                    i.am-icon-list
+                    | 分类
+            li
+                a(href='../home/shopcart.html')
+                    i.am-icon-shopping-basket
+                    | 购物车
+            li.active
+                a(href='index.html')
+                    i.am-icon-user
+                    | 我的

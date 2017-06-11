@@ -1,0 +1,119 @@
+//注册
+@import "../mixins/mixins";
+
+.register{
+  position: relative;
+  height:380px;
+  background-color: #00b38a;
+  .register-headding{
+    position: relative;
+    top:0;
+    width:100%;
+    z-index:1;
+    padding:10px 15px;
+    margin-bottom:15px;
+    //border-bottom: 1px solid #f2f2f2;
+    .register-logo{
+      a{
+        color:#fff;
+        font-size:36px;
+        font-weight:500;
+        text-decoration: none;
+      }
+    }
+
+    .register-title{
+
+    }
+  }
+
+  .register-form{
+    background-color: #fff;
+    margin:50px auto;
+    width:480px;
+    padding:20px 50px;
+    border:1px solid #f2f2f2;
+    position: relative;
+    ul.register-tabs{
+      margin:0;
+      width:100%;
+      border-bottom: 1px solid #f2f2f2;
+      padding:0;
+      li{
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding:15px 0;
+        width:50%;
+        list-style: none;
+        float: left;
+        color:#777;
+        font-size:16px;
+        font-weight: 500;
+        .register-tab-active{
+          display:none;
+          position: absolute;
+          top:52px;
+          left:0;
+          //bottom: -1px;
+          background-color: #00b38a;
+          width: 189px;
+          height: 1px;
+        }
+
+        .register-tab-active:before{
+          position: absolute;
+          z-index: 2;
+          top: -12px;
+          left: 50%;
+          margin-left: -3px;
+          content: '';
+          width: 0;
+          height: 0;
+          line-height: 0;
+          border: 6px solid transparent;
+          border-bottom-color: #00b38a;
+        }
+      }
+      li.active{
+        color:#00b38a;
+        .register-tab-active{
+          display: block;
+        }
+      }
+    }
+    .form-actions{
+      width:100%;
+      .register-btn{
+        width:100%;
+        color:#fff;
+        font-size:16px;
+        padding:10px 0;
+        background-color: #00b38a;
+        .border-radius(0);
+      }
+    }
+  }
+  .form-group{
+    margin:20px 0;
+  }
+  .form-control{
+    .border-radius(0);
+    box-shadow: none;
+    border:1px solid #f7f7f7;
+    background-color: #f7f7f7;
+    height:46px;
+  }
+  .form-control:focus{
+    border: 1px solid #00b38a;
+  }
+
+  .web-description{
+    h5{
+      font-size:16px;
+      margin-top:50px;
+      text-align: center;
+      color:#999;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.page-bar
+    ul.page-breadcrumb
+        li
+            a(href='index.html') 首页
+            i.fa.fa-circle
+        li
+            span 业主迁出
+    .page-toolbar
+        .btn-group.pull-right
+            button.btn.green.btn-sm.btn-outline.dropdown-toggle(type='button', data-toggle='dropdown')
+                | Actions
+                i.fa.fa-angle-down
+            ul.dropdown-menu.pull-right(role='menu')
+                li
+                    a(href='#')
+                        i.icon-bell
+                        |  Action
+                li
+                    a(href='#')
+                        i.icon-shield
+                        |  Another action
+                li
+                    a(href='#')
+                        i.icon-user
+                        |  Something else here
+                li.divider
+                li
+                    a(href='#')
+                        i.icon-bag
+                        |  Separated link
+// END PAGE BAR
+// BEGIN PAGE TITLE
+h3.page-title
+    | 业主迁出
+// END PAGE TITLE
+// END PAGE HEADER
+.row
+    .col-md-12
+        // BEGIN VALIDATION STATES
+        .portlet.light.portlet-fit.portlet-form.bordered
+            .portlet-title
+                .caption
+                    i.icon-settings.font-dark
+                    span.caption-subject.font-dark.sbold.uppercase 业主迁出
+                .actions
+                    .btn-group.btn-group-devided(data-toggle='buttons')
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm.active
+                            input#option1.toggle(type='radio', name='options')
+                            | Actions
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm
+                            input#option2.toggle(type='radio', name='options')
+                            | Settings
+            .portlet-body
+                // BEGIN FORM
+                form#form_sample_3.form-horizontal(action='#')
+                    .form-body
+                        .alert.alert-danger.display-hide
+                            button.close(data-close='alert')
+                            |  表单信息验证未通过.
+                        .alert.alert-success.display-hide
+                            button.close(data-close='alert')
+                            |  表单验证成功!
+                        .row
+                            .col-md-6
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 管理处
+                                        span.required  *
+                                    .col-md-4
+                                        select.form-control.select2me(name='options2')
+                                            option(value='Option 1') 管理处 1
+                                            option(value='Option 2') 管理处 2
+                                            option(value='Option 3') 管理处 3
+                                            option(value='Option 4') 管理处 4
+                                .form-group
+                                    label.col-md-3.control-label
+                                        | 客户编号
+                                        span.required  *
+                                    .col-md-4
+                                        select.form-control.select2me(name='options2')
+                                            option(value='Option 1') 楼宇编号 1
+                                            option(value='Option 2') 楼宇编号 2
+                                            option(value='Option 3') 楼宇编号 3
+                                            option(value='Option 4') 楼宇编号 4
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 业主姓名
+                                        span.required  *
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder='业主姓名')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 手机
+                                        span.required  *
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder='手机')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 座机
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder='座机')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 身份证号
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder='身份证号')
+                            .col-md-6
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | QQ号
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder='QQ号')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 邮件
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder='邮件')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 生日
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder='生日')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 交房日期
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder='交房日期')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 入住日期
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder='入住日期')
+                                .form-group
+                                    label.control-label.col-md-3
+                                        | 收费开始日期
+                                    .col-md-4
+                                        input.form-control(type='text', name='name', data-required='1' placeholder='收费开始日期')
+                        .form-actions
+                            .row
+                                .col-md-12
+                                    button.btn.green(type='submit') 业主迁出
+                                    button.btn.default(type='button') 取消
+                // END FORM
+            // END VALIDATION STATES

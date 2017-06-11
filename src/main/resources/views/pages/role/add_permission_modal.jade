@@ -1,0 +1,57 @@
+.modal-header
+    h4
+        | 为角色添加权限
+        a.btn.btn-xs.pull-right(title='关闭' ng-click='cancel();')
+            i.fa.fa-close
+.modal-body
+    .row
+        .col-md-12
+            .form-md-line-input
+                .md-checkbox-inline
+                    .md-checkbox
+                        input#checkbox33.md-check(type='checkbox')
+                        label(for='checkbox33')
+                            span
+                            span.check
+                            span.box
+                            |  查询权限
+                    .md-checkbox
+                        input#checkbox37.md-check(type='checkbox')
+                        label(for='checkbox37')
+                            span
+                            span.check
+                            span.box
+                            |  新增权限
+                    .md-checkbox
+                        input#checkbox34.md-check(type='checkbox')
+                        label(for='checkbox34')
+                            span
+                            span.check
+                            span.box
+                            |  修改权限
+                    .md-checkbox
+                        input#checkbox35.md-check(type='checkbox')
+                        label(for='checkbox35')
+                            span
+                            span.check
+                            span.box
+                            |  删除权限
+    .category-wrap
+        .category-heading
+            h3 已经赋予的权限
+        .category-content
+            .row
+                .col-md-2.col-xs-2
+                    span 权限1
+                .col-md-2.col-xs-2
+                    span 权限2
+                .col-md-2.col-xs-2
+                    span 权限3
+                .col-md-2.col-xs-2
+                    span 权限4
+                .col-md-2.col-xs-2
+                    span 权限5
+                .col-md-2.col-xs-2
+                    span 权限6
+.modal-footer
+    button.btn.btn-primary(type='button') 确定

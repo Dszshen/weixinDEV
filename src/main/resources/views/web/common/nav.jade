@@ -1,0 +1,40 @@
+// header start
+header.header-frontend
+    .navbar.navbar-default.navbar-static-top
+        .container
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='/web/index.html')
+                    | 官网
+                    span LOGO
+            .navbar-collapse.collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href='/web/index.html') 首页
+                    li
+                        a(href='/web/about.html') 关于
+                    li
+                        a(href='/web/services.html') 服务
+                    li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown', data-hover='dropdown', data-delay='0', data-close-others='false')
+                            | 产品1
+                            b.icon-angle-down
+                        ul.dropdown-menu
+                            li
+                                a(href='/web/products.html') 价格
+                            li
+                                a(href='/web/products.html') 下载
+                    //li
+                        a(href='portfolio.html') Portfolio
+                    li
+                        a(href='/web/products.html') 产品
+                    li
+                        a(href='/web/blog/index.html') 博客
+                    li
+                        a(href='/web/contact.html') 联系我们
+                    li
+                        input.form-control.search(type='text', placeholder=' 搜索')
+// header end

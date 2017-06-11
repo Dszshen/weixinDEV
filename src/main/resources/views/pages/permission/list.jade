@@ -1,0 +1,123 @@
+// BEGIN PAGE HEADER
+.page-bar
+    ul.page-breadcrumb
+        li
+            i.fa.fa-home
+            a(href='#/dashboard') 首页
+            i.fa.fa-angle-right
+        li
+            a(href='#/permission/list') 权限管理
+                i.fa.fa-angle-right
+        li
+            | 权限列表
+    //.page-toolbar
+        .btn-group.pull-right
+            button.btn.btn-sm.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', data-hover='dropdown', data-delay='1000', data-close-others='true')
+                | Actions
+                i.fa.fa-angle-down
+            ul.dropdown-menu.pull-right(role='menu')
+                li
+                    a(href='#')
+                        i.icon-user
+                        |  New User
+                li
+                    a(href='#')
+                        i.icon-present
+                        |  New Event
+                        span.badge.badge-success 4
+                li
+                    a(href='#')
+                        i.icon-basket
+                        |  New order
+                li.divider
+                li
+                    a(href='#')
+                        i.icon-flag
+                        |  Pending Orders
+                        span.badge.badge-danger 4
+                li
+                    a(href='#')
+                        i.icon-users
+                        |  Pending Users
+                        span.badge.badge-warning 12
+h3.page-title
+    | 权限管理
+// END PAGE HEADER
+// BEGIN MAIN CONTENT
+.row
+    .col-md-12
+        // BEGIN EXAMPLE TABLE PORTLET
+        .portlet.light.bordered
+            .portlet-title
+                .caption.font-dark
+                    i.icon-settings.font-dark
+                    span.caption-subject.bold.uppercase  权限列表
+                .actions
+                    .btn-group.btn-group-devided(data-toggle='buttons')
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm.active
+                            input#option1.toggle(type='radio', name='options')
+                            | Actions
+                        label.btn.btn-transparent.dark.btn-outline.btn-circle.btn-sm
+                            input#option2.toggle(type='radio', name='options')
+                            | Settings
+            .portlet-body
+                .table-toolbar
+                    .row
+                        .col-md-6
+                            .btn-group
+                                a#addPermission.btn.sbold.green(href="#/permission/add")
+                                    i.fa.fa-plus
+                                    | 新增权限
+
+                        .col-md-6
+                            .btn-group.pull-right
+                                button.btn.green.btn-outline.dropdown-toggle(data-toggle='dropdown')
+                                    | 更多功能
+                                    i.fa.fa-angle-down
+                                ul.dropdown-menu.pull-right
+                                    li
+                                        a(href='javascript:;')
+                                            i.fa.fa-print
+                                            |  打印
+                                    li
+                                        a(href='javascript:;')
+                                            i.fa.fa-file-pdf-o
+                                            |  保存为PDF
+                                    li
+                                        a(href='javascript:;')
+                                            i.fa.fa-file-excel-o
+                                            |  导出为Excel
+                table#tableList.table.table-striped.table-bordered.table-hover.table-checkable.order-column
+                    thead
+                        tr
+                            th
+                                input.group-checkable(type='checkbox', data-set='#tableList .checkboxes')
+                            th  名称
+                            th  英文名称
+                            th  生成时间
+                            th  生效时间
+                            th  禁用时间
+                            th  状态
+                            th  配置权限
+                            th  操作
+                    tbody
+                        tr.odd.gradeX
+                            td
+                                input.checkboxes(type='checkbox', value='1')
+                            td  读取
+                            td  read
+                            td  2016-04-05
+                            td  2016-04-05
+                            td
+                            td
+                                input.make-switch(type='checkbox', checked='', data-size="small",data-on-text="启用", data-off-text="禁用", data-on-color='info', data-off-color='success')
+                            td.center
+                                span.label.label-sm.label-success 配置权限
+                            td
+                                span.label.label-sm.label-success 编辑
+                                span.label.label-sm.label-danger 删除
+// END MAIN CONTENT
+// BEGIN MAIN JS
+script.
+    TableDatatablesManaged.init();
+// END MAIN JS

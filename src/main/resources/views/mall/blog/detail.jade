@@ -1,0 +1,113 @@
+doctype html
+html
+    head(lang='en')
+        meta(name='format-detection', content='telephone=no')
+        meta(name='renderer', content='webkit')
+        meta(http-equiv='Cache-Control', content='no-siteapp')
+        title 新闻页面
+        include ../common/head
+        link(href='${request.contextPath}/assets/css/mall/personal.css', rel='stylesheet', type='text/css')
+    body
+        include ../common/header
+        .nav-table
+            .long-title
+                span.all-goods 全部分类
+            include ../common/nav
+        b.line
+        // 文章
+        .am-g.am-g-fixed.blog-g-fixed.bloglist
+            .am-u-md-9
+                article.blog-main
+                    h3.am-article-title.blog-title
+                        a(href='#') ×张毛爷爷，搞定靓妆容
+                    h4.am-article-meta.blog-meta 2014-06-17 09:52
+                    .am-g.blog-content
+                        .am-u-sm-12
+                            p
+                                | 年轻的妹子爱美丽，这是人之常情，但是没有足够的经济实力，面对昂贵奢华的护肤品难免囊中羞涩。不过不用担心，年轻的资本就是，不需要投入太多，却依然有俏丽的脸蛋儿~今天小编就给妹子们准备了炙手可热的百元护肤大礼包，看看有没有自己需要的吧！
+                            strong.blog-tit
+                                p
+                                    | 一张毛爷爷
+                                    span 丨
+                                    | 基础护肤
+                            .Row
+                                li
+                                    img(src='${request.contextPath}/assets/images/mall/blog01.jpg')
+                                li
+                                    img(src='${request.contextPath}/assets/images/mall/blog02.jpg')
+                                li
+                                    img(src='${request.contextPath}/assets/images/mall/blog03.jpg')
+                            p 百元以内的基础护肤套装，小编给妹子们挑选了洗面奶、爽肤水和面霜，按照洁面和护肤的顺序，大家可以尽情将这些口碑好货加入购物车哦。
+                            p 一向是；平价又好用的露得清洗面奶，加上很大一支感觉怎么都用不完的千纤草丝瓜水，最后用玉兰油面霜锁住面部水分，简直完美！
+                            strong.blog-tit
+                                p
+                                    | 两张毛爷爷
+                                    span 丨
+                                    | 彩妆
+                            .Row
+                                li
+                                    img(src='${request.contextPath}/assets/images/mall/blog04.jpg')
+                                li
+                                    img(src='${request.contextPath}/assets/images/mall/blog05.jpg')
+                                li
+                                    img(src='${request.contextPath}/assets/images/mall/blog06.jpg')
+                            p
+                                | 眼妆是整个妆面的精髓，一个精致的眼妆可以瞬间提升人的气场，或是娇羞可爱，或者温婉贤淑，或是妩媚妖娆，总有一种风格适合自己。想不到仅仅不到200软妹币就能搞定眼妆这个磨人的小妖精吧！
+                            strong.blog-tit
+                                p
+                                    | 三张毛爷爷
+                                    span 丨
+                                    | 身体护理
+                            .Row
+                                li
+                                    img(src='${request.contextPath}/assets/images/mall/blog07.jpg')
+                                li
+                                    img(src='${request.contextPath}/assets/images/mall/blog08.jpg')
+                                li
+                                    img(src='${request.contextPath}/assets/images/mall/blog09.jpg')
+                            p
+                                | 初春空气干燥，洗手洗澡后不马上涂点润肤乳，皮肤就会不听话得干燥粗糙起来，着实让爱美的妹子们操碎了心。春天不光是万物复苏的季节，还是万物需要滋养的季节，而且要从头到脚得滋养。
+                hr.am-article-divider.blog-hr
+                ul.am-pagination.blog-pagination
+                    li.am-pagination-prev
+                        a(href='') « 上一页
+                    li.am-pagination-next
+                        a(href='') 下一页 »
+            .am-u-md-3.blog-sidebar
+                .am-panel-group
+                    section.am-panel.am-panel-default
+                        .am-panel-hd 热门话题
+                        ul.am-list.blog-list
+                            li
+                                a(href='#')
+                                    p [特惠]闺蜜喊你来囤国货啦
+                            li
+                                a(href='#')
+                                    p [公告]华北、华中部分地区配送延迟
+                            li
+                                a(href='#')
+                                    p [特惠]家电狂欢千亿礼券 买1送1！
+                            li
+                                a(href='#')
+                                    p [公告]商城与广州市签署战略合作协议
+                            li
+                                a(href='#')
+                                    p [特惠]洋河年末大促，低至两件五折
+        .footer
+            .footer-hd
+                p
+                    a(href='#') 恒望科技
+                    b |
+                    a(href='#') 商城首页
+                    b |
+                    a(href='#') 支付宝
+                    b |
+                    a(href='#') 物流
+            .footer-bd
+                p
+                    a(href='#') 关于恒望
+                    a(href='#') 合作伙伴
+                    a(href='#') 联系我们
+                    a(href='#') 网站地图
+                    em © 2015-2025 Hengwang.com 版权所有
+        script(src='${request.contextPath}/assets/libs/AmazeUI-2.4.2/assets/js/amazeui.min.js')

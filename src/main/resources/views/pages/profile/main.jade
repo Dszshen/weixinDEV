@@ -1,0 +1,114 @@
+// BEGIN PAGE HEADER
+.page-bar
+    ul.page-breadcrumb
+        li
+            a(href='#/dashboard.html') Home
+            i.fa.fa-circle
+        li
+            a(href='#/profile/dashboard') User Profile
+    .page-toolbar
+        .btn-group.pull-right
+            button.btn.btn-sm.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', data-hover='dropdown', data-delay='1000', data-close-others='true')
+                | Actions
+                i.fa.fa-angle-down
+            ul.dropdown-menu.pull-right(role='menu')
+                li
+                    a(href='#')
+                        i.icon-user
+                        |  New User
+                li
+                    a(href='#')
+                        i.icon-present
+                        |  New Event
+                        span.badge.badge-success 4
+                li
+                    a(href='#')
+                        i.icon-basket
+                        |  New order
+                li.divider
+                li
+                    a(href='#')
+                        i.icon-flag
+                        |  Pending Orders
+                        span.badge.badge-danger 4
+                li
+                    a(href='#')
+                        i.icon-users
+                        |  Pending Users
+                        span.badge.badge-warning 12
+h3.page-title  Profile
+// END PAGE HEADER
+// BEGIN PAGE CONTENT
+.row(ng-controller='UserProfileController')
+    .col-md-12
+        // BEGIN PROFILE SIDEBAR
+        .profile-sidebar
+            // PORTLET MAIN
+            .portlet.light.profile-sidebar-portlet
+                // SIDEBAR USERPIC
+                .profile-userpic
+                    img.img-responsive(src='{{settings.assetsPath}}/pages/media/profile/profile_user.jpg', alt='')
+                // END SIDEBAR USERPIC
+                // SIDEBAR USER TITLE
+                .profile-usertitle
+                    .profile-usertitle-name  Marcus Doe
+                    .profile-usertitle-job  Developer
+                // END SIDEBAR USER TITLE
+                // SIDEBAR BUTTONS
+                .profile-userbuttons
+                    button.btn.btn-circle.green-haze.btn-sm(type='button') Follow
+                    button.btn.btn-circle.btn-danger.btn-sm(type='button') Message
+                // END SIDEBAR BUTTONS
+                // SIDEBAR MENU
+                .profile-usermenu
+                    ul.nav
+                        li(ng-class="{active: $state.includes('profile.dashboard')}")
+                            a(ui-sref='profile.dashboard')
+                                i.icon-home
+                                |  Overview
+                        li(ng-class="{active: $state.includes('profile.account')}")
+                            a(ui-sref='profile.account')
+                                i.icon-settings
+                                |  Account Settings
+                        li
+                            a(href='#/todo')
+                                i.icon-check
+                                |  Tasks
+                        li(ng-class="{active: $state.includes('profile.help')}")
+                            a(ui-sref='profile.help')
+                                i.icon-info
+                                |  Help
+                // END MENU
+            // END PORTLET MAIN
+            // PORTLET MAIN
+            .portlet.light
+                // STAT
+                .row.list-separated.profile-stat
+                    .col-md-4.col-sm-4.col-xs-6
+                        .uppercase.profile-stat-title  37
+                        .uppercase.profile-stat-text  Projects
+                    .col-md-4.col-sm-4.col-xs-6
+                        .uppercase.profile-stat-title  51
+                        .uppercase.profile-stat-text  Tasks
+                    .col-md-4.col-sm-4.col-xs-6
+                        .uppercase.profile-stat-title  61
+                        .uppercase.profile-stat-text  Uploads
+                // END STAT
+                div
+                    h4.profile-desc-title About Marcus Doe
+                    span.profile-desc-text  Lorem ipsum dolor sit amet diam nonummy nibh dolore.
+                    .margin-top-20.profile-desc-link
+                        i.fa.fa-globe
+                        a(href='http://www.keenthemes.com') www.keenthemes.com
+                    .margin-top-20.profile-desc-link
+                        i.fa.fa-twitter
+                        a(href='http://www.twitter.com/keenthemes/') @keenthemes
+                    .margin-top-20.profile-desc-link
+                        i.fa.fa-facebook
+                        a(href='http://www.facebook.com/keenthemes/') keenthemes
+            // END PORTLET MAIN
+        // END BEGIN PROFILE SIDEBAR
+        // BEGIN PROFILE CONTENT
+        .profile-content.fade-in-up(ui-view='')
+        // END PROFILE CONTENT
+// END PAGE CONTENT

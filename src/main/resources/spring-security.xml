@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/security
+             http://www.springframework.org/schema/security/spring-security-3.2.xsd
+             http://www.springframework.org/schema/beans
+             http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+    <beans:bean id="authenticationEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+        <beans:property name="loginFormUrl" value="/login.html"/>
+    </beans:bean>
+
+    <authentication-manager>
+        <authentication-provider user-service-ref="userService">
+            <!--启用盐值加密，防止被破解-->
+            <password-encoder hash="md5">
+                <salt-source user-property="username"/>
+            </password-encoder>
+        </authentication-provider>
+    </authentication-manager>
+
+    <http pattern="/assets/**/*" security="none"/>
+
+
+    <http auto-config="false" use-expressions="true" disable-url-rewriting="true" entry-point-ref="authenticationEntryPoint" access-denied-page="/denied.html">
+        <logout logout-url="/logout"/>
+        <intercept-url pattern="/" access="permitAll"/>
+
+        <!--        <intercept-url pattern="/login" access="permitAll"/>
+                <intercept-url pattern="/main/**/*" access="hasRole('ROLE_USER')"/>
+                <intercept-url pattern="/admin/**/*" access="hasRole('admin')"/>
+                <intercept-url pattern="/api/admin/**/*" access="hasRole('admin')"/>
+
+                <intercept-url pattern="/api/weixin" access="permitAll"/>
+                <intercept-url pattern="/api/weixin/**/*" access="permitAll"/>
+                <intercept-url pattern="/**/*" access="isAuthenticated()"/>-->
+        <intercept-url pattern="/**/*" access="permitAll"/>
+    </http>
+
+</beans:beans>
