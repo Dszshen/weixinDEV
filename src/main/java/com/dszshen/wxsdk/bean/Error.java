@@ -1,7 +1,7 @@
 package com.dszshen.wxsdk.bean;
 
+import com.alibaba.fastjson.JSONObject;
 import com.belerweb.social.bean.Result;
-import org.json.JSONObject;
 
 /**
  * Created by zhangbin on 2017/5/27 0027.
@@ -51,7 +51,7 @@ public final class Error extends JsonBean{
         return this.errorCode + ":" + this.error + "(" + this.request + ")";
     }
 
-    public static Error parse(JSONObject jsonObject) {
+    /*public static Error parse(JSONObject jsonObject) {
         String errorCode = jsonObject.optString("error_code", (String)null);
         String error;
         Error er;
@@ -93,5 +93,5 @@ public final class Error extends JsonBean{
                 }
             }
         }
-    }
+    }*/
 }

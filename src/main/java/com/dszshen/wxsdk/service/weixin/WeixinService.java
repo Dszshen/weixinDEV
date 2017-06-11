@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.Arrays;
 
 /**
- * Created by Administrator on 2017/5/25 0025.
+ * Created by zhangbin on 2017/5/25 0025.
  */
 @Service
 public class WeixinService {
