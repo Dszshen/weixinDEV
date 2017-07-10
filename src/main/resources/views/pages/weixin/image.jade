@@ -19,22 +19,43 @@ h3.page-title
           i.icon-settings.font-dark
           span.caption-subject.font-dark.sbold.uppercase 微信图片管理
       .portlet-body
-        // BEGIN FORM
-        form#form_sample_3.form-horizontal(action='#')
-          .form-body
-            .row
-              .col-md-12
-                h3 图片格式
-              .col-md-12
-                .form-group
-                  label.control-label.col-md-4
-                    | 图片管理（json格式）
-                    span.required  *
-                  .col-md-8
-                    textarea.form-control(rows=12 name='menu' data-required='1')
-            .form-actions
-              .row
-                .col-md-12
-                  button.btn.green(type='submit') 微信图片管理
-                  button.btn.default(type='button') 取消
+        .table-scrollable
+          table.table.table-hover
+            thead
+              tr
+                th  #
+                th  First Name
+                th  Last Name
+                th  Username
+                th  Status
+            tbody
+              tr
+                td  1
+                td  Mark
+                td  Otto
+                td  makr124
+                td
+                  span.label.label-sm.label-success  Approved
+              tr
+                td  2
+                td  Jacob
+                td  Nilson
+                td  jac123
+                td
+                  span.label.label-sm.label-info  Pending
+              tr
+                td  3
+                td  Larry
+                td  Cooper
+                td  lar
+                td
+                  span.label.label-sm.label-warning  Suspended
+              tr
+                td  4
+                td  Sandy
+                td  Lim
+                td  sanlim
+                td
+                  span.label.label-sm.label-danger  Blocked
+
 
