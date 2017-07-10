@@ -1,0 +1,40 @@
+// BEGIN PAGE HEADER
+.page-bar
+  ul.page-breadcrumb
+    li
+      i.fa.fa-home
+      a(href='#/dashboard') 首页
+      i.fa.fa-angle-right
+    li
+      a(href='#/weixin/menu') 微信图片管理
+h3.page-title
+  | 微信图片管理
+// END PAGE HEADER
+// BEGIN MAIN CONTENT
+.row
+  .col-md-12
+    .portlet.light.portlet-fit.portlet-form.bordered
+      .portlet-title
+        .caption
+          i.icon-settings.font-dark
+          span.caption-subject.font-dark.sbold.uppercase 微信图片管理
+      .portlet-body
+        // BEGIN FORM
+        form#form_sample_3.form-horizontal(action='#')
+          .form-body
+            .row
+              .col-md-12
+                h3 图片格式
+              .col-md-12
+                .form-group
+                  label.control-label.col-md-4
+                    | 图片管理（json格式）
+                    span.required  *
+                  .col-md-8
+                    textarea.form-control(rows=12 name='menu' data-required='1')
+            .form-actions
+              .row
+                .col-md-12
+                  button.btn.green(type='submit') 微信图片管理
+                  button.btn.default(type='button') 取消
+

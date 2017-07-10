@@ -8,10 +8,8 @@ var XXAPP = angular.module("XXAPP", [
     "ui.tree",
     "oc.lazyLoad",  
     "ngSanitize",
-    "frapontillo.bootstrap-switch",
     "duScroll",
     "ngJsTree",
-    "uiSwitch"
 ]);
 
 

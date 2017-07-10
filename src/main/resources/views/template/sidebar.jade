@@ -34,11 +34,8 @@
                 li
                     a(href='#/system/setting')
                         | 系统参数配置
-                li.nav-item
-                    a.nav-link.nav-toggle(href='#/role/list')
-                        |  角色管理
         li.nav-item
-            a.nav-link.nav-toggle(href='javascript:;')
+            a.nav-link.nav-toggle(href='#/weixin/menu')
                 i.fa.fa-building-o(aria-hidden="true")
                 span.title 菜单管理
                 //span.arrow
@@ -52,9 +49,9 @@
                             a(href='#/house/propertyDev/add')
                                 | 用户列表
         li.nav-item
-            a.nav-link.nav-toggle(href='javascript:;')
+            a.nav-link.nav-toggle(href='#/weixin/message')
                 i.fa.fa-building-o(aria-hidden="true")
-                span.title 消息管理
+                span.title 微信消息管理
                 //span.arrow
             //ul.sub-menu
                 li.nav-item
@@ -65,3 +62,7 @@
                         li
                             a(href='#/house/propertyDev/add')
                                 | 新增开发商信息
+        li.nav-item
+            a.nav-link.nav-toggle(href='#/weixin/image')
+                i.fa.fa-building-o(aria-hidden="true")
+                span.title 微信图片管理
