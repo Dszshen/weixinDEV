@@ -25,15 +25,7 @@ public class HtmlController {
 
     @RequestMapping("/")
     public String index() {
-        double random = Math.random();
-        //检查是否登陆，如果没有登陆，则跳转到登陆页面
-        System.out.println("random:"+random);
-        /*if(random<0.2){
-            return "redirect:/main";
-        }else{
-            return "redirect:/navweb/nav.html";
-        }*/
-        return "redirect:/navweb/nav.html";
+        return "redirect:/main";
     }
 }
 

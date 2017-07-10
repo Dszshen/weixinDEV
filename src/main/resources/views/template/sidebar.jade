@@ -37,33 +37,12 @@
                 li.nav-item
                     a.nav-link.nav-toggle(href='#/role/list')
                         |  角色管理
-                li.nav-item
-                    a.nav-link.nav-toggle(href='#/permission/list')
-                        |  权限管理
-                li.nav-item
-                    a.nav-link.nav-toggle(href='#/user/list')
-                        |  用户管理(内部人员)
-                li
-                    a(href='#/menu')
-                        | 菜单管理
-                li
-                    a(href='#/column')
-                        | 栏目管理
-                li
-                    a(href='#/dictionary')
-                        | 数据字典
-                li
-                    a(href='#/shieldWords')
-                        | 屏蔽词
-                li
-                    a(href='#/logs')
-                        | 日志
         li.nav-item
             a.nav-link.nav-toggle(href='javascript:;')
                 i.fa.fa-building-o(aria-hidden="true")
-                span.title 用户管理(消费者)
-                span.arrow
-            ul.sub-menu
+                span.title 菜单管理
+                //span.arrow
+            //ul.sub-menu
                 li.nav-item
                     a.nav-link.nav-toggle(href='javascript:;')
                         | 用户信息
@@ -75,9 +54,9 @@
         li.nav-item
             a.nav-link.nav-toggle(href='javascript:;')
                 i.fa.fa-building-o(aria-hidden="true")
-                span.title 房产管理
-                span.arrow
-            ul.sub-menu
+                span.title 消息管理
+                //span.arrow
+            //ul.sub-menu
                 li.nav-item
                     a.nav-link.nav-toggle(href='javascript:;')
                         | 开发商信息管理
@@ -86,180 +65,3 @@
                         li
                             a(href='#/house/propertyDev/add')
                                 | 新增开发商信息
-                li
-                    a(href='#/house/add')
-                        |  新增房产
-                li
-                    a(href='#/house/list')
-                        |  房产列表
-                li
-                    a(href='#/house/changeTitle')
-                        |  房屋产权变更
-                li
-                    a(href='#/house/drawing')
-                        |  房间状态图示
-        li.nav-item
-            a.nav-link.nav-toggle(href='javascript:;')
-                i.fa.fa-users
-                span.title 业主管理
-                span.arrow
-            ul.sub-menu
-                li
-                    a(href='#/homeowner/list')
-                        | 房间档案信息
-                li
-                    a(href='#/homeowner/decoration')
-                        | 业主装修
-                li
-                    a(href='#/homeowner/add')
-                        | 业主入住
-                li
-                    a(href='#/homeowner/out')
-                        | 业主迁出
-                li
-                    a(href='#/homeowner/repair')
-                        | 请修管理
-                li
-                    a(href='#/homeowner/addBuilding')
-                        | 业主加建
-                li
-                    a(href='#/homeowner/liveHistory')
-                        | 入住历史
-                li
-                    a(href='#/homeowner/complaint')
-                        | 业主事件管理
-        li.nav-item
-            a.nav-link.nav-toggle(href='javascript:;')
-                i.fa.fa-shopping-bag(aria-hidden="true")
-                span.title 销售管理
-                span.arrow
-            ul.sub-menu
-                li
-                    a(href='#/sale/house')
-                        | 房产销售
-                li
-                    a(href='#/sale/contract')
-                        | 销售合同查询
-                li
-                    a(href='#/sale/checkHouse')
-                        | 物业验房
-                li
-                    a(href='#/sale/takeOver')
-                        | 物业接管
-                li
-                    a(href='#/sale/drawingManage')
-                        | 图纸管理
-                li
-                    a(href='#/sale/')
-                        | 业主数据导入
-        li.nav-item
-            a.nav-link.nav-toggle(href='javascript:;')
-                i.fa.fa-shopping-bag(aria-hidden="true")
-                span.title 客服管理
-                span.arrow
-            ul.sub-menu
-                li
-                    a(href='#/customerService')
-                        | 客服管理
-        li.nav-item
-            a.nav-link.nav-toggle(href='javascript:;')
-                i.fa.fa-usd(aria-hidden="true")
-                span.title 费用管理
-                span.arrow
-            ul.sub-menu
-                li.nav-item
-                    a.nav-link.nav-toggle(href='javascript:;')
-                        |  费用设置
-                        span.arrow
-                    ul.sub-menu
-                        li
-                            a(href='#/fee/general/setting')
-                                |  常规费项设置
-                        li
-                            a(href='#/fee/public/setting')
-                                |  公摊费项设置
-                        li
-                            a(href='#/fee/temp/setting')
-                                |  临时费项设置
-                        li
-                            a(href='#/fee/guest/setting')
-                                |  临客费项设置
-                        li
-                            a(href='#/fee/propertyManagement/distribution')
-                                |  物业费分布
-                        li
-                            a(href='#/fee/public/distribution')
-                                |  公摊费分布
-                        li
-                            a(href='#/fee/initInstrument')
-                                |  初始化仪表
-                        li
-                            a(href='#/fee/print/setting')
-                                |  打印参数设置
-                li.nav-item
-                    a.nav-link.nav-toggle(href='javascript:;')
-                        |  票据管理
-                        span.arrow
-                    ul.sub-menu
-                        li
-                            a(href='#/datatables/managed.html')
-                                |  Managed Datatables
-                        li
-                            a(href='#/datatables/ajax.html')
-                                |  Ajax Datatables
-                li.nav-item
-                    a.nav-link.nav-toggle(href='javascript:;')
-                        |  收费管理
-                        span.arrow
-                    ul.sub-menu
-                        li
-                            a(href='#/datatables/managed.html')
-                                |  Managed Datatables
-                        li
-                            a(href='#/datatables/ajax.html')
-                                |  Ajax Datatables
-                li.nav-item
-                    a.nav-link.nav-toggle(href='javascript:;')
-                        |  收银管理
-                        span.arrow
-                    ul.sub-menu
-                        li
-                            a(href='#/datatables/managed.html')
-                                |  Managed Datatables
-                        li
-                            a(href='#/datatables/ajax.html')
-                                |  Ajax Datatables
-                li.nav-item
-                    a.nav-link.nav-toggle(href='javascript:;')
-                        |  资金分析
-                        span.arrow
-                    ul.sub-menu
-                        li
-                            a(href='#/datatables/managed.html')
-                                |  Managed Datatables
-                        li
-                            a(href='#/datatables/ajax.html')
-                                |  Ajax Datatables
-        li.heading
-            h3.uppercase API文档&数据库设计
-        li.nav-item
-            a.nav-link.nav-toggle(href='javascript:;')
-                i.fa.fa-paper-plane(aria-hidden="true")
-                span.title API文档&数据库设计
-                span.arrow
-            ul.sub-menu
-                li.nav-item
-                    a.nav-link.nav-toggle(href='javascript:;')
-                        |  API文档
-                        span.arrow
-                    ul.sub-menu
-                        li
-                            a(href='#/api/dev')
-                                |  开发API
-                        li
-                            a(href='#/api/open')
-                                |  开放API
-                li.nav-item
-                    a.nav-link.nav-toggle(href='#/database/api')
-                        |  数据库设计
-    // END SIDEBAR MENU
