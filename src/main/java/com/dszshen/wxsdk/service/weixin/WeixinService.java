@@ -1,9 +1,12 @@
 package com.dszshen.wxsdk.service.weixin;
 
+import com.alibaba.fastjson.JSONObject;
 import com.belerweb.social.weixin.bean.Message;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -12,14 +15,13 @@ import java.util.Arrays;
  * Created by zhangbin on 2017/5/25 0025.
  */
 @Service
-public class WeixinService {
-
+public class WeixinService implements ConfigChanged,ApplicationListener<ContextRefreshedEvent> {
 
     @Value("${weixin.token}")
     private String token;
-    @Value("${weixin.appID}")
+    @Value("${weixin.app_id}")
     private String appID;
-    @Value("${weixin.appSecret}")
+    @Value("${weixin.app_secret}")
     private String appSecret;
 
     /**
@@ -46,4 +48,11 @@ public class WeixinService {
         return true;
     }
 
+    public void configChanged(JSONObject config) {
+
+    }
+
+    public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
+
+    }
 }

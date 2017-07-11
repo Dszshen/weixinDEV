@@ -10,6 +10,7 @@ public final class Weixin extends SDK {
     private String secret;
     private String token;
     private AccessToken accessToken;
+    private Menu menu;
 
     public String getAppId() {
         return appId;

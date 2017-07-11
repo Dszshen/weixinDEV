@@ -23,7 +23,9 @@ h3.page-title
                 .tabbable-custom
                     ul.nav.nav-tabs
                         li.active
-                            a(href='javascript:void(0);', data-target="#tab_weixin", data-toggle='tab')  微信参数设置
+                            a(href='javascript:void(0);', data-target="#tab_weixin", data-toggle='tab')  微信参数设置  nb 
+                        li
+                            a(href='javascript:void(0);', data-target="#tab_database", data-toggle='tab')  数据库设置
                         li
                             a(href='javascript:void(0);', data-target="#tab_database", data-toggle='tab')  数据库设置
                     .tab-content
@@ -47,6 +49,14 @@ h3.page-title
                                             label.col-md-2.control-label Token:
                                             .col-md-6
                                                 input.form-control(type='text', placeholder='Token')
+                                        .form-group
+                                            label.col-md-2.control-label aes:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='aes')
+                                        .form-group
+                                            label.col-md-2.control-label accessToken:
+                                            .col-md-6
+                                                input.form-control(type='text', placeholder='accessToken')
                                     .form-actions
                                         button.btn.blue(type='submit') 确定
                                         button.btn.default(type='button') 取消

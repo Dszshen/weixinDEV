@@ -63,7 +63,7 @@ public class Menu extends JsonBean {
         this.subMenus = subMenus;
     }
 
-    public static Menu parse(JSONObject jsonObject) {
+    /*public static Menu parse(JSONObject jsonObject) {
         if(jsonObject == null) {
             return null;
         } else {
@@ -75,5 +75,5 @@ public class Menu extends JsonBean {
             //obj.subMenus = Result.parse(jsonObject.getJSONArray("sub_button"), Menu.class);
             return obj;
         }
-    }
+    }*/
 }
