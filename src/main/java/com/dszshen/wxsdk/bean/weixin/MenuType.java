@@ -1,4 +1,4 @@
-package com.dszshen.wxsdk.weixin.bean;
+package com.dszshen.wxsdk.bean.weixin;
 
 /**
  * Created by zhangbin on 2017/5/31 0031.

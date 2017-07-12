@@ -19,7 +19,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- *
+ * 用户bean
  */
 @Entity
 @Table(name = "user", catalog = "bs3")

@@ -1,4 +1,4 @@
-package com.dszshen.wxsdk.weixin.bean;
+package com.dszshen.wxsdk.bean.weixin;
 
 import com.dszshen.wxsdk.bean.JsonBean;
 
