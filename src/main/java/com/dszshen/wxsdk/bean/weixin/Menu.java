@@ -20,10 +20,12 @@ public class Menu extends JsonBean {
   @Column(name="id")
   private String id;
   private String pid;
-  private String type;
+  private MenuType type;
   private String key;
   private String url;
   private String name;
+
+  //private List<Menu> subs;
 
   public Menu() {
   }
@@ -48,11 +50,11 @@ public class Menu extends JsonBean {
     this.pid = pid;
   }
 
-  public String getType() {
+  public MenuType getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(MenuType type) {
     this.type = type;
   }
 
@@ -79,4 +81,12 @@ public class Menu extends JsonBean {
   public void setName(String name) {
     this.name = name;
   }
+
+  /*public List<Menu> getSubs() {
+    return subs;
+  }
+
+  public void setSubs(List<Menu> subs) {
+    this.subs = subs;
+  }*/
 }

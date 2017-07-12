@@ -1,9 +1,7 @@
 package com.dszshen.wxsdk.service.weixin;
 
-import com.alibaba.fastjson.JSONObject;
 import com.dszshen.wxsdk.bean.ConfigBean;
 import com.dszshen.wxsdk.dao.ConfigDao;
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
@@ -15,7 +13,6 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

@@ -76,4 +76,11 @@ public class WeixinApi {
         }
         return new ResponseEntity<byte[]>(HttpStatus.OK);
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "createMenu")
+    public void api() {
+        weixinService.createMenu();
+    }
+
+
 }

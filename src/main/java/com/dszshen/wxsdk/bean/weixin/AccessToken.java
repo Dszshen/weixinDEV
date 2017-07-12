@@ -12,6 +12,9 @@ public class AccessToken extends JsonBean {
     public AccessToken() {
     }
 
+    public AccessToken(String token,Long expiresIn) {
+    }
+
     public String getToken() {
         return token;
     }
